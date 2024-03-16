@@ -3,9 +3,9 @@ run-name: ${{ github.actor }} 🚀
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 jobs:
   deps-installation:
     runs-on: ubuntu-latest

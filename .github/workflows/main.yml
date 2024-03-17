@@ -53,7 +53,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: linting
-        run: yarn lint
+        run: yarn cache clean && yarn lint
   production-build:
     runs-on: ubuntu-latest
     strategy:

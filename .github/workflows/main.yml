@@ -26,7 +26,7 @@ jobs:
         id: cache-dependencies
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: dependencies installation
@@ -49,7 +49,7 @@ jobs:
         id: cache-dependencies
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: linting
@@ -72,7 +72,7 @@ jobs:
         id: cache-dependencies
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: project building

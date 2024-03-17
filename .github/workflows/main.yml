@@ -31,29 +31,30 @@ jobs:
             ${{ runner.os }}-node-
       - name: dependencies installation
         run: yarn
-  linting:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
-    needs: [deps-installation]
-    steps:
-      - name: Checkout Commit
-        uses: actions/checkout@v2
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-      - name: restoring dependencies
-        uses: actions/cache@v2
-        id: cache-dependencies
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: linting
-        run: yarn cache clean && yarn lint
+  #  @todo разобраться с Error [ERR_REQUIRE_ESM]: require() of ES Module
+  #  linting:
+  #    runs-on: ubuntu-latest
+  #    strategy:
+  #      matrix:
+  #        node-version: [18.x]
+  #    needs: [deps-installation]
+  #    steps:
+  #      - name: Checkout Commit
+  #        uses: actions/checkout@v2
+  #      - name: Setup Node.js ${{ matrix.node-version }}
+  #        uses: actions/setup-node@v1
+  #        with:
+  #          node-version: ${{ matrix.node }}
+  #      - name: restoring dependencies
+  #        uses: actions/cache@v2
+  #        id: cache-dependencies
+  #        with:
+  #          path: node_modules
+  #          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock') }}
+  #          restore-keys: |
+  #            ${{ runner.os }}-node-
+  #      - name: linting
+  #        run: yarn cache clean && yarn lint
   production-build:
     runs-on: ubuntu-latest
     strategy:

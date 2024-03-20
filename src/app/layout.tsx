@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import './globals.scss';
+import { Layout as Container } from 'shared/ui/layout';
+import classNames from 'classnames/bind';
+import classes from './layout.module.scss';
+import 'styles/global.scss';
+
+const cx = classNames.bind(classes);
 
 interface Props {
   /** Встраиваемый контент. */
@@ -14,7 +19,9 @@ export const metadata: Metadata = {
 export default function Layout({ children }: Readonly<Props>) {
   return (
     <html lang='ru'>
-      <body>{children}</body>
+      <body className={cx('body')}>
+        <Container className={cx('main')} as='main' children={children} />
+      </body>
     </html>
   );
 }

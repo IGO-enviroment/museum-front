@@ -1,5 +1,5 @@
 import styles from './page.module.css';
 
 export default function Home() {
-  return <main className={styles.main}>ЗДЕСЬ БУДЕТ САЙТ</main>;
+  return <div className={styles.root}>ЗДЕСЬ БУДЕТ САЙТ</div>;
 }

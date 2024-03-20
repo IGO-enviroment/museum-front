@@ -1,0 +1,31 @@
+// брэйкпоинты дизайн-системы
+
+/* stylelint-disable length-zero-no-unit */
+$map: (
+  // ВАЖНО: тут именно 0px а не 0 - в Safari нельзя использовать @media (min-width: 0)
+  mxs: 0px,
+  xs: 390px,
+  s: 1080px,
+  l: 1440px,
+  xl: 1920px
+) !default;
+
+@mixin greater-than-or-equal($breakpoint) {
+  @if map-has-key($map, $breakpoint) {
+    @media (min-width: map-get($map, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn 'No such breakpoint `#{$breakpoint}`. Available values: #{map-keys($map)}.';
+  }
+}
+
+@mixin less-than($breakpoint) {
+  @if map-has-key($map, $breakpoint) {
+    @media (max-width: (map-get($map, $breakpoint) - 1px)) {
+      @content;
+    }
+  } @else {
+    @warn 'No such breakpoint `#{$breakpoint}`. Available values: #{map-keys($map)}.';
+  }
+}

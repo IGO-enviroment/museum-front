@@ -19,5 +19,5 @@ interface Props {
  * @return Элемент.
  */
 export const Layout = ({ children, as: Tag = 'div', className }: Props) => {
-  return <Tag className={cx('root', className)}>{children}</Tag>;
+  return <Tag className={cx(className, 'root')}>{children}</Tag>;
 };

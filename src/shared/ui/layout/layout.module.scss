@@ -2,21 +2,10 @@
 @import 'styles/breakpoints';
 
 .root {
-  display: grid;
-  padding: 0 16px;
-  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: map.get($map, 'xl');
-
-  $base-column-gap: 8px;
-
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: $base-column-gap;
-
-  @include less-than('l') {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  @include less-than('s') {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  width: 100%;
 }

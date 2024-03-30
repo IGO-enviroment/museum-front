@@ -1,6 +1,4 @@
-import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { Layout as Container } from 'shared/ui/layout';
 import classNames from 'classnames/bind';
 import classes from './layout.module.scss';
 import 'styles/global.scss';
@@ -12,15 +10,13 @@ interface Props {
   children: ReactNode;
 }
 
-export const metadata: Metadata = {
-  title: 'Museum',
-};
-
 export default function Layout({ children }: Readonly<Props>) {
   return (
     <html lang='ru'>
       <body className={cx('body')}>
-        <Container className={cx('main')} as='main' children={children} />
+        <header />
+        <main className={cx('main')}>{children}</main>
+        <footer />
       </body>
     </html>
   );

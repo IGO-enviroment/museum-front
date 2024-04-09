@@ -1,0 +1,51 @@
+$bg-color: #f6f8f9;
+$bg-hovered: #dedddd;
+
+.root {
+  height: 40px;
+  min-width: 190px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: left;
+  background: $bg-color;
+  color: black;
+  position: relative;
+
+  &:hover{
+    background: $bg-hovered;
+  }
+}
+
+.listbox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  margin: 12px 0;
+  min-width: 190px;
+  border-radius: 12px;
+  outline: 0;
+  background: $bg-color;
+  border: 1px solid $bg-hovered;
+}
+
+.popup {
+  z-index: 1;
+}
+
+
+
+/** Options */
+
+.option{
+  padding: 15px;
+  border-radius: inherit;
+
+  &:hover{
+    background: $bg-hovered;
+  }
+
+  &.selected {
+    background: $bg-hovered;
+  }
+}

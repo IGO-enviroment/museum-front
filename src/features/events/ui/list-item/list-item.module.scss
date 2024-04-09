@@ -9,6 +9,7 @@
 
   .image-container {
     width: 120px;
+    flex-shrink: 0;
     border-radius: inherit;
     border: 1px solid black;
   }

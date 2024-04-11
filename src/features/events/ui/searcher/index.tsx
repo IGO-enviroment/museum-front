@@ -12,7 +12,12 @@ const options = [{ title: 'Поиск по заголовку' }, { title: 'По
 export const Searcher = () => {
   return (
     <div className={cx('root')}>
-      <Select defaultValue={options[0].title} multiple={false} className={cx('select')}>
+      <Select
+        placeholder='Выберите опцию'
+        defaultValue={options[0].title}
+        multiple={false}
+        className={cx('select')}
+      >
         {options.map((option, i) => (
           <Option key={i} value={option.title}>
             {option.title}

@@ -45,7 +45,11 @@ $bg-hovered: #dedddd;
     background: $bg-hovered;
   }
 
-  &.selected {
+  &.selected  {
+    background: $bg-hovered;
+  }
+
+  &.highlighted  {
     background: $bg-hovered;
   }
 }

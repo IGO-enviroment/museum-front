@@ -1,3 +1,5 @@
+'use client';
+
 import { OptionOwnerState, OptionProps, SelectProps } from '@mui/base';
 import { SelectOwnProps } from '@mui/base/Select/Select.types';
 import classNames from 'classnames/bind';
@@ -19,12 +21,12 @@ const slotsProps: SelectOwnProps<any, boolean>['slotProps'] = {
 };
 
 export const Select = (props: SelectProps<any, boolean>) => {
-  return <BaseSelect multiple {...props} slotProps={slotsProps} />;
+  return <BaseSelect {...props} slotProps={slotsProps} />;
 };
 
 const optionSlotsProps: OptionProps<any>['slotProps'] = {
   root: (ownerState: OptionOwnerState<any>) => ({
-    className: cx('option', { selected: ownerState.selected }),
+    className: cx('option', { selected: ownerState.selected, highlighted: ownerState.highlighted }),
   }),
 };
 

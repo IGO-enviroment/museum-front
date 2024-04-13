@@ -10,11 +10,16 @@ import { format } from 'date-fns';
 
 const cx = classNames.bind(styles);
 
-// @todo добавить hover (поле будет изменяться только через date picker)
+type Props = {
+  name?: string;
+  value?: string;
+  onSelect?: (name?: string, date?: string) => void;
+  formatDate?: string;
+};
 
-export const DatePicker = () => {
+// @todo добавить hover (поле будет изменяться только через date picker)
+export const DatePicker = ({ name, onSelect, value, formatDate = 'dd.MM.yyyy' }: Props) => {
   const anchor = useRef<HTMLDivElement | null>(null);
-  const [selected, setSelected] = useState<Date>();
   const [opened, setOpened] = useState<boolean>(false);
   const calendarRef = useRef<HTMLDivElement | null>(null);
 
@@ -23,8 +28,8 @@ export const DatePicker = () => {
       <div ref={anchor}>
         <Input
           className={cx('input')}
-          placeholder={format(new Date(), 'dd.MM.yyyy')}
-          value={selected ? format(selected, 'dd.MM.yyyy') : ''}
+          placeholder={format(new Date(), formatDate)}
+          value={value ? format(value, formatDate) : ''}
           onClick={() => {
             setOpened(true);
           }}
@@ -35,13 +40,16 @@ export const DatePicker = () => {
           }}
         />
       </div>
+      {/* @todo вынести календарь*/}
       <Popup anchor={anchor.current} open={opened} placement='bottom'>
         <div ref={calendarRef}>
           <DayPicker
             mode='single'
             className={cx('date-pricker')}
-            selected={selected}
-            onSelect={setSelected}
+            selected={value ? new Date(value) : undefined}
+            onSelect={date => {
+              onSelect && onSelect(name, date?.toISOString());
+            }}
             locale={ru}
             onDayClick={() => {
               setOpened(false);

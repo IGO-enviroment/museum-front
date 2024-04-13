@@ -3,13 +3,14 @@ $bg-hovered: #dedddd;
 
 .root {
   height: 40px;
-  min-width: 190px;
+  width: 190px;
   padding: 8px 12px;
   border-radius: 8px;
   text-align: left;
   background: $bg-color;
   color: black;
   position: relative;
+  overflow: hidden;
 
   &:hover{
     background: $bg-hovered;
@@ -32,8 +33,6 @@ $bg-hovered: #dedddd;
 .popup {
   z-index: 1;
 }
-
-
 
 /** Options */
 

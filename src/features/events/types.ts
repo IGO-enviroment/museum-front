@@ -45,12 +45,14 @@ export declare namespace Filters {
   namespace Filter {
     interface Item {
       name: string;
-      values: Array<Filter.Option>;
+      type: 'range' | 'select' | 'multiple-select' | 'calendar';
+      tooltip?: string; // текст для подсказки
+      value?: any;
     }
 
-    interface Option {
-      id: number;
-      name: string;
+    interface Value {
+      id?: number;
+      name?: string;
       isSelected?: boolean;
     }
   }
@@ -70,6 +72,7 @@ export declare namespace Filters {
       start: string;
       end: string;
     };
+    // @todo - тут filters
     tags: Array<number>;
     types: Array<number>;
     areas: Array<number>;

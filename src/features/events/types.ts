@@ -44,12 +44,19 @@ export declare namespace Events {
 export declare namespace Filters {
   namespace Filter {
     interface Item {
+      /** Наименование (ключ) фильтра.  */
       name: string;
-      type: 'range' | 'select' | 'multiple-select' | 'calendar';
+      /** Заголовок для отображения фильтра. */
+      title?: string;
+      /** Как следует выводить фильтр. */
+      type: 'range' | 'select' | 'multiple-select' | 'calendar' | 'toggle';
+      /** Подсказка для тех, кто затрудняется. */
       tooltip?: string; // текст для подсказки
+      /** Значения поля. @todo */
       value?: any;
     }
 
+    // @todo расписать значения для каждого отдельного типа фильтра.
     interface Value {
       id?: number;
       name?: string;

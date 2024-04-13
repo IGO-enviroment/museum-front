@@ -10,7 +10,8 @@ $bg-hovered: #dedddd;
   background: $bg-color;
   color: black;
   position: relative;
-  overflow: hidden;
+  overflow-x: scroll;
+  flex-shrink: 0;
 
   &:hover{
     background: $bg-hovered;
@@ -44,11 +45,12 @@ $bg-hovered: #dedddd;
     background: $bg-hovered;
   }
 
-  &.selected  {
-    background: $bg-hovered;
+  &.selected {
+    background: #aec7d7;
   }
 
-  &.highlighted  {
-    background: $bg-hovered;
+  &.highlighted, &.highlighted.selected  {
+    // @todo расскоментить как придумаю как лучше показывать нафигацию по клаве.
+    //background: $bg-hovered;
   }
 }

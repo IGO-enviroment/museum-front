@@ -121,19 +121,28 @@ export const RangeField = ({ max, min, start = min, finish = max, onChange, disa
         />
       </div>
       <RangeInput
+        className={cx('range-input')}
         max={max}
         min={min}
         step={1}
         value={[currentStart, currentFinish]}
-        // onChange={(event, data, activeThumb) => {
-        //   if (Array.isArray(data)) {
-        //     setTextStart(format(data[0]));
-        //     setTextFinish(format(data[1]));
-        // onChangeCommitted={(_, data) => {
-        //   if (Array.isArray(data)) {
-        //     setCurrentStart(data[0]);
-        //     setCurrentFinish(data[1]);
-        //     dispatchChange(data[0], data[1]);
+        onChange={(event, data, activeThumb) => {
+          if (Array.isArray(data)) {
+            setTextStart(format(data[0]));
+            setTextFinish(format(data[1]));
+            setCurrentStart(data[0]);
+            setCurrentFinish(data[1]);
+            dispatchChange(data[0], data[1]);
+          }
+        }}
+        /** @todo пофиксить отправку изменений. */
+        onChangeCommitted={(_, data) => {
+          if (Array.isArray(data)) {
+            setCurrentStart(data[0]);
+            setCurrentFinish(data[1]);
+            dispatchChange(data[0], data[1]);
+          }
+        }}
       />
     </div>
   );

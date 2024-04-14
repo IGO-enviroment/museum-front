@@ -24,9 +24,23 @@ export const DatePickerField = ({ onChange, values }: Props) => {
   return (
     <div className={cx('root')}>
       c
-      <DatePicker name='to' value={values[0]} onSelect={onSelect} />
+      <DatePicker
+        name='to'
+        value={values[0]}
+        onSelect={onSelect}
+        {...(Boolean(values[1]) && {
+          calendarProps: { disabled: { after: new Date(values[1]) } },
+        })}
+      />
       по
-      <DatePicker name='from' value={values[1]} onSelect={onSelect} />
+      <DatePicker
+        name='from'
+        value={values[1]}
+        onSelect={onSelect}
+        {...(Boolean(values[0]) && {
+          calendarProps: { disabled: { before: new Date(values[0]) } },
+        })}
+      />
     </div>
   );
 };

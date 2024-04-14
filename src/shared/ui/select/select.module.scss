@@ -1,5 +1,6 @@
 $bg-color: #f6f8f9;
 $bg-hovered: #dedddd;
+$bg-selected: #0080ff;
 
 .root {
   height: 40px;
@@ -46,7 +47,8 @@ $bg-hovered: #dedddd;
   }
 
   &.selected {
-    background: #aec7d7;
+    color: white;
+    background: $bg-selected;
   }
 
   &.highlighted, &.highlighted.selected  {

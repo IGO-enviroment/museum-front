@@ -1,6 +1,12 @@
 import { Unstable_Popup as Popup } from '@mui/base/Unstable_Popup';
 import { Input } from 'shared/ui/input';
-import { DayPicker } from 'react-day-picker';
+import {
+  DayPicker,
+  DayPickerDefaultProps,
+  DayPickerMultipleProps,
+  DayPickerRangeProps,
+  DayPickerSingleProps,
+} from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import { useRef, useState } from 'react';
 import classNames from 'classnames/bind';
@@ -15,10 +21,21 @@ type Props = {
   value?: string;
   onSelect?: (name?: string, date?: string) => void;
   formatDate?: string;
+  calendarProps?:
+    | DayPickerDefaultProps
+    | DayPickerSingleProps
+    | DayPickerMultipleProps
+    | DayPickerRangeProps;
 };
 
 // @todo добавить hover (поле будет изменяться только через date picker)
-export const DatePicker = ({ name, onSelect, value, formatDate = 'dd.MM.yyyy' }: Props) => {
+export const DatePicker = ({
+  name,
+  onSelect,
+  value,
+  formatDate = 'dd.MM.yyyy',
+  calendarProps,
+}: Props) => {
   const anchor = useRef<HTMLDivElement | null>(null);
   const [opened, setOpened] = useState<boolean>(false);
   const calendarRef = useRef<HTMLDivElement | null>(null);
@@ -48,7 +65,7 @@ export const DatePicker = ({ name, onSelect, value, formatDate = 'dd.MM.yyyy' }:
             className={cx('date-pricker')}
             selected={value ? new Date(value) : undefined}
             onSelect={date => {
-              onSelect && onSelect(name, date?.toISOString());
+              return onSelect && onSelect(name, date?.toISOString());
             }}
             locale={ru}
             onDayClick={() => {
@@ -58,6 +75,7 @@ export const DatePicker = ({ name, onSelect, value, formatDate = 'dd.MM.yyyy' }:
               today: cx('today'),
               selected: cx('selected'),
             }}
+            {...calendarProps}
           />
         </div>
       </Popup>

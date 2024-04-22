@@ -1,4 +1,5 @@
 // @todo вынести в общий
+
 export type Page = {
   total: number;
   current: number;
@@ -44,13 +45,22 @@ export declare namespace Events {
 export declare namespace Filters {
   namespace Filter {
     interface Item {
+      /** Наименование (ключ) фильтра.  */
       name: string;
-      values: Array<Filter.Option>;
+      /** Заголовок для отображения фильтра. */
+      title?: string;
+      /** Как следует выводить фильтр. */
+      type: 'range' | 'select' | 'multiple-select' | 'calendar' | 'toggle';
+      /** Подсказка для тех, кто затрудняется. */
+      tooltip?: string; // текст для подсказки
+      /** Значения поля. @todo */
+      value?: any;
     }
 
-    interface Option {
-      id: number;
-      name: string;
+    // @todo расписать значения для каждого отдельного типа фильтра.
+    interface Value {
+      id?: number;
+      name?: string;
       isSelected?: boolean;
     }
   }
@@ -70,6 +80,7 @@ export declare namespace Filters {
       start: string;
       end: string;
     };
+    // @todo - тут filters
     tags: Array<number>;
     types: Array<number>;
     areas: Array<number>;

@@ -4,5 +4,10 @@
   gap: 20px;
   padding: 10px 0;
   max-width: 100%;
-  overflow: scroll visible;
+}
+
+.filters-controller{
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }

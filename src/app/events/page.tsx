@@ -9,7 +9,7 @@ import { Filters } from 'features/events/ui/filters';
 const cx = classNames.bind(classes);
 
 export const metadata: Metadata = {
-  title: 'Events',
+  title: 'Поиск по событиям музея',
 };
 
 export default function Events() {

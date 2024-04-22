@@ -1,8 +1,9 @@
-import { FILTER_TYPES, FiltersState } from 'features/events/store/store';
+import { FiltersStore } from './store';
+import { FILTER_TYPES } from 'features/events/store/filters-slice';
 
-const filters = (state: FiltersState) => state.filters;
+const filters = (state: FiltersStore) => state.filters;
 
-const selectedValues = (state: FiltersState) =>
+const selectedValues = (state: FiltersStore) =>
   filters(state).reduce(
     (acc, filter) => {
       switch (filter.type) {
@@ -39,7 +40,7 @@ const selectedValues = (state: FiltersState) =>
     {} as Record<string, any[]>,
   );
 
-const hasSelectedFilters = (state: FiltersState) =>
+const hasSelectedFilters = (state: FiltersStore) =>
   Boolean(Object.keys(selectedValues(state)).length);
 
 export const selectors = {

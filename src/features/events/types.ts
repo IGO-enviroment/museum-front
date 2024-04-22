@@ -1,4 +1,5 @@
 // @todo вынести в общий
+
 export type Page = {
   total: number;
   current: number;

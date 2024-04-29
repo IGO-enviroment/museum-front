@@ -1,0 +1,58 @@
+@import 'styles/breakpoints';
+
+.root {
+
+}
+
+.title {
+    font-size: 96px;
+    font-weight: 600;
+    line-height: 105.6px;
+    letter-spacing: -0.01em;
+    color: white;
+    @include less-than('s'){
+        font-size: 42px;
+        line-height: 46.2px;
+    }
+}
+
+.subtitle {
+    color: #C5CBD3;
+}
+
+.main-banner{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        z-index: -1;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #040B1F 0%, rgba(4, 11, 31, 0.5) 67%, rgba(4, 11, 31, 0.2) 100%);
+    }
+}
+
+.banner-img {
+    position:absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-wrapper {
+    height: 1500px;
+    width: 100%;
+    border-radius: 48px 48px 0 0;
+    margin-top: -50px;
+    background: white;
+    overflow: hidden;
+    padding-top: 100px;
+}

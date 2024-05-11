@@ -1,0 +1,67 @@
+@import 'styles/breakpoints';
+
+.root {
+  overflow: hidden;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  max-width: 424px;
+  height: 422px;
+  @include less-than('l') {
+    max-width: 300px;
+    height: 298px;
+    padding: 12px;
+  }
+}
+
+.photo {
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  height: 212px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include less-than('l') {
+    height: 160px;
+  }
+}
+
+.title {
+  flex-shrink: 0;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  height: 50px;
+  color: #1A2026;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 24px;
+  @include less-than('l') {
+    margin-top: 16px;
+  }
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  @include less-than('l') {
+    max-height: 40px;
+    overflow: hidden;
+  }
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(246, 248, 249, 1);
+    border-radius: 12px;
+    padding: 8px;
+    width: fit-content;
+  }
+}

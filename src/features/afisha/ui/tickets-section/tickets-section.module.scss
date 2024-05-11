@@ -1,0 +1,83 @@
+@import "styles/breakpoints";
+
+.tickets {
+  margin-top: 100px;
+  @include less-than('l') {
+    margin-top: 48px;
+  }
+}
+
+.ticket {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  width: 421px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25.2px;
+  overflow: hidden;
+
+  @include less-than('l') {
+    width: 358px;
+    height: 150px;
+  }
+
+  .ticket-title{
+    position: absolute;
+    padding: 21px 124px 84px 40px;
+    z-index: 10;
+    color: white;
+    @include less-than('l'){
+       padding: 21px 58px 54px 40px;
+    }
+  }
+
+  &::before,&::after {
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    transform: translate(0, -16px);
+    content: '';
+    background: white;
+    z-index: 10;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    @include less-than('l') {
+      width: 27px;
+      height: 27px;
+      left: -13.5px;
+    }
+  }
+
+  &::after{
+    left: calc(100% - 16px);
+    @include less-than('l'){
+      left: calc(100% - 13.5px);;
+    }
+  }
+
+  .ticket-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      border-radius: inherit;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#040B1F 0%, rgba(4, 11, 31, 0) 100%);
+    }
+  }
+}

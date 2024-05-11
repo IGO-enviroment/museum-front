@@ -13,5 +13,5 @@ const slotsProps: ButtonProps['slotProps'] = {
     }),
   }),
 };
-
+// @todo избавиться
 export const Button = (props: ButtonProps) => <BaseButton {...props} slotProps={slotsProps} />;

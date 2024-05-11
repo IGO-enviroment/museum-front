@@ -24,6 +24,7 @@ body {
   height: 100%;
   width: 100%;
   text-size-adjust: 100%;
+  color: black;
 }
 
 input,
@@ -48,8 +49,10 @@ ol {
 button {
   cursor: pointer;
   outline: none;
+  background: none;
 }
 
-a {
+a, a:visited {
+  color: inherit;
   text-decoration: none;
 }

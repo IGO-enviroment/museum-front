@@ -1,0 +1,77 @@
+@import "styles/breakpoints";
+
+.section-title {
+  display: block;
+  color: #1A2026;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35px;
+  margin-bottom: 24px;
+  @include less-than('l') {
+    font-size: 24px;
+  }
+}
+
+.closest-events {
+  overflow: hidden;
+  margin-top: 100px;
+
+  @include less-than('l'){
+    margin-top: 48px;
+  }
+
+  .month {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .dates {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(26, 32, 38, 1);
+    border-radius: 16px;
+    &.selected {
+      background: rgba(234, 234, 255, 1);
+      .day {
+        color: rgba(99, 103, 204, 1);
+      }
+    }
+  }
+
+  .day {
+    font-weight: 600;
+  }
+
+  .week-day {
+    color: rgba(176, 182, 191, 1)
+  }
+}
+
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 8px;
+  margin-top: 16px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.all-events {
+  align-self: flex-end;
+}

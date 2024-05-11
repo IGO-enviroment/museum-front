@@ -1,22 +1,39 @@
 'use client';
 
-import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import { ReactElement } from 'react';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import { CSSProperties, ReactElement } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import { DotNavigation } from 'shared/ui/carousel/ui/dot-navigation';
+import './carousel.scss';
 
 interface Props {
+  gap?: number;
   children: ReactElement[];
-  carouselOptions?: SwiperProps;
+  needDotNavigation?: boolean;
+  carouselData: ReturnType<typeof useEmblaCarousel>;
 }
 
-export function Carousel({ children, carouselOptions }: Props) {
+export function Carousel({ children, needDotNavigation, gap, carouselData }: Props) {
+  const [emblaRef, emblaApi] = carouselData;
+
   return (
-    <Swiper {...carouselOptions}>
-      {children.map(item => (
-        <SwiperSlide>{item}</SwiperSlide>
-      ))}
-    </Swiper>
+    <section className='embla'>
+      <div className='embla__viewport' ref={emblaRef}>
+        <div
+          className='embla__container'
+          style={
+            {
+              '--slide-spacing': `${gap}px`,
+            } as CSSProperties
+          }
+        >
+          {children.map(item => (
+            <div className='embla__slide'>{item}</div>
+          ))}
+        </div>
+      </div>
+      <div className='embla__controls'>
+        {needDotNavigation && <DotNavigation emblaApi={emblaApi} />}
+      </div>
+    </section>
   );
 }

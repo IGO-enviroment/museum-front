@@ -1,0 +1,51 @@
+@import "styles/breakpoints";
+
+.section-title {
+  display: block;
+  color: #1A2026;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35px;
+  @include less-than('l') {
+    font-size: 24px;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  @include greater-than-or-equal('l') {
+    min-height: 57px;
+  }
+}
+
+.popular {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navigation-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .cards {
+    width: 100%;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 12px;
+}

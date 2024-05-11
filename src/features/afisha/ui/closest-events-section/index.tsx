@@ -10,6 +10,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useState } from 'react';
 import { Button } from 'shared/ui/button-d';
 import ArrowRight from '../../../../../public/icons/system/24x24/arrow-right.svg';
+import { useRouter } from 'next/navigation';
 
 const cx = classNames.bind(styles);
 
@@ -36,6 +37,7 @@ const badges = [
 ];
 
 export function ClosestEventsSection() {
+  const router = useRouter();
   const [activeData, setActiveData] = useState(() => calendarData.dates[0]);
 
   const isLessThanS = useBreakpoint('s-');
@@ -80,6 +82,9 @@ export function ClosestEventsSection() {
             size='small'
             icon={ArrowRight}
             iconPosition='end'
+            onClick={() => {
+              router.push('/events');
+            }}
           />
         )}
       </div>

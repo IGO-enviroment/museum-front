@@ -7,6 +7,9 @@
   width: 100%;
   z-index: 1000;
   color: white;
+  &.black-theme {
+    color: #1A2026;
+  }
 }
 
 .wrapper {

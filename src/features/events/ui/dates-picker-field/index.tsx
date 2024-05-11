@@ -23,7 +23,6 @@ export const DatePickerField = ({ onChange, values }: Props) => {
 
   return (
     <div className={cx('root')}>
-      c
       <DatePicker
         name='to'
         value={values[0]}
@@ -32,7 +31,6 @@ export const DatePickerField = ({ onChange, values }: Props) => {
           calendarProps: { disabled: { after: new Date(values[1]) } },
         })}
       />
-      по
       <DatePicker
         name='from'
         value={values[1]}

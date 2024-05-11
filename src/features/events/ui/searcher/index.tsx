@@ -16,25 +16,12 @@ const options: Array<{ title: string; by: 'title' | 'description' }> = [
 // @todo добавить debounce
 export const Searcher = () => {
   const { searchValue, onSearchChange } = useEventsStore();
-  const { searchBy, onSearchByChange } = useEventsStore();
 
   return (
     <div className={cx('root')}>
-      <Select
-        value={searchBy}
-        className={cx('select')}
-        onChange={(_, data) => {
-          onSearchByChange(data);
-        }}
-      >
-        {options.map((option, i) => (
-          <Option key={i} value={option.by}>
-            {option.title}
-          </Option>
-        ))}
-      </Select>
       <Input
         value={searchValue}
+        placeholder='Введите название мероприятия'
         onChange={event => {
           onSearchChange(event.target.value);
         }}

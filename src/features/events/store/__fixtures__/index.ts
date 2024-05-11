@@ -19,6 +19,7 @@ export const FiltersData: Filters.Filter.Item[] = [
   {
     name: 'event_activity',
     type: 'select',
+    title: 'Тип мероприятия',
     value: [
       {
         id: 1,
@@ -40,6 +41,7 @@ export const FiltersData: Filters.Filter.Item[] = [
   {
     name: 'age_limit',
     type: 'select',
+    title: 'Возрастное ограничение',
     value: [
       {
         id: 1,
@@ -60,13 +62,14 @@ export const FiltersData: Filters.Filter.Item[] = [
   },
   {
     name: 'date',
+    title: 'Дата',
     type: 'calendar',
     value: ['', ''],
   },
   {
     name: 'price',
     type: 'range',
-    title: 'Цена',
+    title: 'Стоимость билетов',
     value: [
       {
         from: 1200,
@@ -77,13 +80,15 @@ export const FiltersData: Filters.Filter.Item[] = [
     ],
   },
   {
-    name: 'sort_by_popularity',
-    type: 'toggle',
-    title: 'Сортировать по популярности',
+    name: 'tickets',
+    type: 'range',
+    title: 'Количество билетов',
     value: [
       {
-        id: 0,
-        isSelected: false,
+        from: 15,
+        to: 7,
+        min: 0,
+        max: 38,
       },
     ],
   },

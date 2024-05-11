@@ -1,4 +1,26 @@
+
+.main-container {
+  display: flex;
+  gap: 18px;
+}
+
+.main-column {
+  flex-grow: 1;
+}
+
 .root {
-  margin-top: 60px;
+  margin-top: 206px;
   height: 100%;
+}
+
+.filters {
+  max-width: 423px;
+  padding-top: 141px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35.2px;
+  color: #1A2026;
 }

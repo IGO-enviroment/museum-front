@@ -1,4 +1,4 @@
-import { MainContent } from 'features/afisha/ui/main-content';
+import { MainContent } from 'features/afisha';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

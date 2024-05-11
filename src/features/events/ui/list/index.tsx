@@ -2,26 +2,18 @@
 
 import classNames from 'classnames/bind';
 import classes from './list.module.scss';
-import { Events } from 'features/events/types';
-import { ListItem } from 'features/events/ui/list-item';
 import { Pagination } from 'shared/ui/pagination';
 import { useEventsStore } from 'features/events/store/store';
+import { EventCard } from 'widget/event-card';
+import TestImg from '../../../../../public/test/test.jpg';
 
 const cx = classNames.bind(classes);
 
-const tempItems: Partial<Events.Item>[] = [
-  {
-    name: 'Название мероприятия #1',
-  },
-  {
-    name: 'Название мероприятия #2',
-  },
-  {
-    name: 'Название мероприятия #3',
-  },
-  {
-    name: 'Название мероприятия #4',
-  },
+const badges = [
+  { type: 'date', text: '28, 30 марта' },
+  { type: 'time', text: '14:00' },
+  { type: 'age', text: '12+' },
+  { type: 'info', text: 'Экскурсия по выставке' },
 ];
 
 export const List = () => {
@@ -31,9 +23,11 @@ export const List = () => {
   return (
     <div className={cx('root')}>
       <div className={cx('events')}>
-        {events.map((data, i) => (
-          <ListItem key={i} {...data} />
-        ))}
+        {events
+          .flatMap(item => [item, item, item])
+          .map((data, i) => (
+            <EventCard href='' image={TestImg} key={i} badges={badges} />
+          ))}
       </div>
       <Pagination
         className={cx('pagination')}

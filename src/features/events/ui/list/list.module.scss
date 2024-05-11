@@ -1,7 +1,6 @@
 .root {
   display: flex;
   flex-direction: column;
-
   .pagination {
     margin-top: 30px;
     align-self: center;
@@ -9,8 +8,8 @@
 
   .events {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-top: 24px;
   }
 }

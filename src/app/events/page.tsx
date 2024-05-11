@@ -15,9 +15,14 @@ export const metadata: Metadata = {
 export default function Events() {
   return (
     <Layout className={cx('root')}>
-      <Filters />
-      <Searcher />
-      <List />
+      <div className={cx('main-container')}>
+        <Filters className={cx('filters')} />
+        <div className={cx('main-column')}>
+          <h2 className={cx('title')}>Поиск по мероприятиям</h2>
+          <Searcher />
+          <List />
+        </div>
+      </div>
     </Layout>
   );
 }

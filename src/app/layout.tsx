@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import classes from './layout.module.scss';
 import 'styles/global.scss';
 import { Header } from 'widget/header';
+import { Footer } from 'widget/footer';
 
 const cx = classNames.bind(classes);
 
@@ -17,7 +18,7 @@ export default function Layout({ children }: Readonly<Props>) {
       <body className={cx('body')}>
         <Header />
         <main className={cx('main')}>{children}</main>
-        <footer />
+        <Footer />
       </body>
     </html>
   );

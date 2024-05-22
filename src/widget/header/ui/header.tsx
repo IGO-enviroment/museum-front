@@ -16,19 +16,22 @@ const navLinks: { children: string; href: string }[] = [
   { children: 'Личный кабинет', href: '' },
 ];
 
-const routesForBlackTheme = ['/events'];
+const routesForBlackTheme = ['/events', '/event'];
 
 export const Header = () => {
   const pathname = usePathname();
+
+  const isBlackTheme = routesForBlackTheme.some(route => route.indexOf(pathname));
+
   return (
-    <header className={cx('header', { 'black-theme': routesForBlackTheme.includes(pathname) })}>
+    <header className={cx('header', { 'black-theme': isBlackTheme })}>
       <Layout className={cx('layout')}>
         <div className={cx('wrapper')}>
           <Logo className={cx('logo')} fill='currentColor' />
-          <Menu className={cx('menu')} />
+          <Menu className={cx('menu')} fill='currentColor' />
           <div className={cx('navigation')}>
             {navLinks.map(data => (
-              <Link {...data} />
+              <Link key={data.children} {...data} />
             ))}
           </div>
         </div>

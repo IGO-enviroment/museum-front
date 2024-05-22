@@ -1,3 +1,9 @@
+@use 'styles/breakpoints';
+
+.gallery {
+  margin-top: 206px;
+  min-height: 524px;
+}
 
 .main-container {
   display: flex;
@@ -9,13 +15,16 @@
 }
 
 .root {
-  margin-top: 206px;
-  height: 100%;
+  margin-top: 100px;
 }
 
 .filters {
   max-width: 423px;
   padding-top: 141px;
+
+  @include breakpoints.less-than('s') {
+    display: none;
+  }
 }
 
 .title {

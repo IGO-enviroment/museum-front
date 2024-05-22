@@ -10,13 +10,14 @@ interface Props {
   children: ReactElement[];
   needDotNavigation?: boolean;
   carouselData: ReturnType<typeof useEmblaCarousel>;
+  className: string;
 }
 
-export function Carousel({ children, needDotNavigation, gap, carouselData }: Props) {
+export function Carousel({ children, needDotNavigation, gap, carouselData, className }: Props) {
   const [emblaRef, emblaApi] = carouselData;
 
   return (
-    <section className='embla'>
+    <section className={`embla ${className ? className : ''}`}>
       <div className='embla__viewport' ref={emblaRef}>
         <div
           className='embla__container'

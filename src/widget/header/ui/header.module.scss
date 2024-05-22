@@ -7,8 +7,15 @@
   width: 100%;
   z-index: 1000;
   color: white;
+
   &.black-theme {
     color: #1A2026;
+
+    .menu {
+      path {
+        stroke: #1A2026;
+      }
+    }
   }
 }
 
@@ -35,7 +42,7 @@
 }
 
 
-.menu{
+.menu {
   display: none;
   padding: 16px;
   width: 58px;
@@ -45,6 +52,7 @@
     display: block;
     margin-left: auto;
   }
+
   path {
     stroke: white;
   }

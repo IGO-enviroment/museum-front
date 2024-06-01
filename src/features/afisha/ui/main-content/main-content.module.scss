@@ -1,0 +1,119 @@
+@import "styles/breakpoints";
+
+.root {
+
+}
+
+.title {
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 105.6px;
+  letter-spacing: -0.01em;
+  color: white;
+  @include less-than('s'){
+    font-size: 42px;
+    line-height: 46.2px;
+  }
+}
+
+.section-title {
+  color: #1A2026;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35px;
+  margin-bottom: 16px;
+  @include less-than('l') {
+    font-size: 24px;
+  }
+}
+
+.subtitle {
+  color: #C5CBD3;
+}
+
+.main-banner-wrapper {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.main-banner{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  &::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #040B1F 0%, rgba(4, 11, 31, 0.5) 67%, rgba(4, 11, 31, 0.2) 100%);
+  }
+}
+
+.banner-img {
+  position:absolute; //@todo сделать через background-attacment fixed
+  z-index: -100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; //@todo возможно стоит убрать
+}
+
+.main-wrapper {
+  overflow-y: visible;
+  position: relative;
+  width: 100%;
+  border-radius: 0;
+  margin-top: -50px;
+  background: white;
+  padding-top: 100px;
+  z-index: 150;
+  @include less-than('l') {
+    margin-top: 0;
+    padding-top: 48px;
+  }
+  -webkit-transition: border-radius 1s;
+  transition: border-radius 1s;
+  &.rounded {
+    border-radius: 48px 48px 0 0;
+  }
+}
+
+.scroller {
+  z-index: 1000;
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  width: 130px;
+  height: 130px;
+  @include less-than('l') {
+    width: 96px;
+    height: 96px;
+    top: -48px;
+  }
+  border-radius: 50%;
+  background-color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, 0);
+
+  .arrow-down {
+    cursor: pointer;
+    position: relative;
+    top: -25px;
+    width: 35px;
+    height: 35px;
+    path {
+      stroke-width: 3px;
+      d: path("m6 18 12 12 12-12");
+    }
+  }
+}

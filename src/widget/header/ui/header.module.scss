@@ -1,0 +1,77 @@
+@import 'styles/breakpoints';
+
+.header{
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: white;
+
+  .logo {
+    &.disabled {
+    cursor: default;
+    pointer-events: none;
+    }
+  }
+
+  &.black-theme {
+    color: #1A2026;
+
+    .menu {
+      path {
+        stroke: #1A2026;
+      }
+    }
+  }
+}
+
+.wrapper {
+  padding: 11px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+}
+
+.logo-svg {
+  &-small {
+    display: none;
+  }
+  @include less-than('s') {
+    display: none;
+    &-small {
+      display: block;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include less-than('s') {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  padding: 16px;
+  width: 58px;
+  height: 58px;
+
+  @include less-than('s') {
+    display: block;
+    margin-left: auto;
+  }
+
+  path {
+    stroke: white;
+  }
+}

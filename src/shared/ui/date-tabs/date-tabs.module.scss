@@ -1,0 +1,49 @@
+.month {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.day {
+  font-weight: 600;
+}
+
+.week-day {
+  color: rgb(176 182 191 / 100%)
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 77px;
+  background: white;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  border-radius: 16px;
+  
+  &.selected {
+    background: #6367CC;
+    color: white;
+
+    .day {
+      color: white;
+    }
+
+    .week-day {
+      color: white;
+    }
+  }
+}
+
+
+

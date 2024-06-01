@@ -1,4 +1,52 @@
+@use 'styles/breakpoints';
+
+.wrapper {
+  margin-top: 206px;
+
+  @include breakpoints.less-than('l') {
+    margin-top: 140px;
+  }
+}
+
+.gallery {
+  max-width: 4296px;
+  margin: 0 auto;
+  min-height: 524px;
+}
+
+.main-container {
+}
+
+.main-column {
+  grid-column: 4 / -1;
+
+  @include breakpoints.less-than('l') {
+    grid-column: 1 / -1;
+  }
+}
+
 .root {
-  margin-top: 60px;
-  height: 100%;
+  margin-top: 100px;
+
+  @include breakpoints.less-than('s') {
+    margin-top: 32px;
+  }
+}
+
+.filters {
+  max-width: 423px;
+  padding-top: 141px;
+
+  grid-column: 1 / 4;
+
+  @include breakpoints.less-than('l') {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35.2px;
+  color: #1A2026;
 }

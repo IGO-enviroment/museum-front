@@ -17,5 +17,8 @@
     width: 100%;
     height: 100%;
     background: inherit;
+    &::placeholder {
+      color: #C5CBD3;
+    }
   }
 }

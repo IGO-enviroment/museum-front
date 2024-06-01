@@ -1,10 +1,10 @@
-import { MainContent } from 'features/afisha';
-import { Metadata } from 'next';
+import styles from './page.module.css';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Афиша',
+  title: 'Museum',
 };
 
 export default function Home() {
-  return <MainContent />;
+  return <div className={styles.root}>ЗДЕСЬ БУДЕТ САЙТ</div>;
 }

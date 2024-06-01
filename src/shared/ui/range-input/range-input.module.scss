@@ -1,4 +1,4 @@
-$active-color: #6367CC;
+$active-color: #0080ff;
 
 .root {
   color: $active-color;
@@ -25,7 +25,7 @@ $active-color: #6367CC;
   display: block;
   position: absolute;
   width: 100%;
-  height: 8px;
+  height: 4px;
   border-radius: 6px;
   background-color: currentColor;
   opacity: 0.3;
@@ -34,7 +34,7 @@ $active-color: #6367CC;
 .track {
   display: block;
   position: absolute;
-  height: 8px;
+  height: 4px;
   border-radius: 6px;
   background-color: currentColor;
 }
@@ -44,8 +44,8 @@ $active-color: #6367CC;
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   margin-left: -6px;
   box-sizing: border-box;
   border-radius: 50%;

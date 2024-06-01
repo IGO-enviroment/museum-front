@@ -1,60 +1,13 @@
-.container {
-  position: sticky;
-  top: 5px;
-}
-
-.title {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 35.2px;
-  color: #1A2026;
-}
-
 .root {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   padding: 10px 0;
   max-width: 100%;
-}
-
-.range-field {
-  align-self: flex-start;
 }
 
 .filters-controller{
   display: flex;
   align-items: center;
   gap: 24px;
-}
-
-
-
-
-.filter {
-  padding: 24px 0;
-  .filter-title {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 23.4px;
-    color: #1A2026;
-    padding-bottom: 24px;
-  }
-}
-
-.select {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.option {
-  cursor: pointer;
-  user-select: none;
-  background: #F6F8F9;
-  padding: 18.5px 16px;
-  border-radius: 12px;
-  &.selected {
-    color: white;
-    background: #6367CC;
-  }
 }

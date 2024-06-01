@@ -1,15 +1,42 @@
+@use 'styles/breakpoints';
+
 .root {
   display: flex;
   flex-direction: column;
+
   .pagination {
     margin-top: 30px;
     align-self: center;
   }
 
   .events {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 8px;
     margin-top: 24px;
+
+
+    @include breakpoints.less-than('s') {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    .event {
+      display: block;
+      grid-column: span 3;
+      height: auto;
+      max-width: none;
+
+      @include breakpoints.less-than('s') {
+        grid-column: span 4;
+      }
+
+      @include breakpoints.less-than('xs') {
+        grid-column: 1 / -1;
+      }
+
+      @media (max-width: 600px) {
+        grid-column: 1 / -1;
+      }
+    }
   }
 }

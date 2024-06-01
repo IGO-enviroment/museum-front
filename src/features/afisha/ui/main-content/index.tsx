@@ -8,8 +8,7 @@ import ArrowDown from '../../../../../public/icons/system/24x24/chevron-down.svg
 import { PopularSection } from 'features/afisha/ui/popular-section';
 import { TicketsSection } from 'features/afisha/ui/tickets-section';
 import { ClosestEventsSection } from 'features/afisha/ui/closest-events-section';
-import { useRef, useState } from 'react';
-import { useIntersectionObserver } from 'shared/hooks/use-intersection-observer';
+import { useLayoutEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
@@ -17,35 +16,53 @@ const cx = classNames.bind(styles);
 export function MainContent() {
   const elementToScroll = useRef<HTMLDivElement | null>(null);
   const bannerRef = useRef<HTMLDivElement | null>(null);
-  const [bannerVisible, setBannerVisible] = useState(true);
 
   const onScrollerClick = () => {
     if (elementToScroll) {
-      elementToScroll.current?.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({
+        behavior: 'smooth',
+        top: bannerRef.current?.clientHeight,
+      });
     }
   };
 
-  useIntersectionObserver(
-    bannerRef,
-    ({ isIntersecting }) => {
-      setBannerVisible(isIntersecting);
-    },
-    { threshold: 0.2 },
-  );
+  // заменить
+  useLayoutEffect(() => {
+    const onScroll = () => {
+      const scrollPosition = window.scrollY;
+      const winHeight = window.innerHeight;
+
+      if (bannerRef && elementToScroll) {
+        const banner = bannerRef.current;
+
+        if (banner?.style) {
+          banner.style.display = scrollPosition > winHeight ? 'none' : 'flex';
+        }
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    onScroll();
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <div className={styles.root}>
-      <div ref={bannerRef} className={styles['main-banner']}>
-        <Layout>
-          <h1 className={styles.title}>
-            Афиша событий
-            <br />
-            <span className={styles.subtitle}>в музее истории Екатеринбурга</span>
-          </h1>
-        </Layout>
-        <Image alt='' src={BG} className={styles['banner-img']} />
+      <div className={styles['main-banner-wrapper']}>
+        <div ref={bannerRef} className={styles['main-banner']}>
+          <Layout>
+            <h1 className={styles.title}>
+              Афиша событий
+              <br />
+              <span className={styles.subtitle}>в музее истории Екатеринбурга</span>
+            </h1>
+          </Layout>
+          <Image alt='' src={BG} className={styles['banner-img']} />
+        </div>
       </div>
-      <div ref={elementToScroll} className={cx('main-wrapper', { rounded: bannerVisible })}>
+      <div ref={elementToScroll} className={cx('main-wrapper', 'rounded')}>
         <div onClick={onScrollerClick} className={styles.scroller}>
           <ArrowDown className={styles['arrow-down']} />
         </div>

@@ -17,7 +17,7 @@ import { Map } from 'widget/map';
 const cx = classNames.bind(styles);
 
 export const metadata: Metadata = {
-  title: 'Динамические изменяемое название события',
+  title: 'Название события',
 };
 
 const testData = {
@@ -71,6 +71,7 @@ const getIconByType = (type: string) => {
 
 export default function Event({ params }: { params: { 'event-id': string } }) {
   const { info, address, about } = testData;
+
   return (
     <Layout className={cx('layout')}>
       <section className={cx('title')}>

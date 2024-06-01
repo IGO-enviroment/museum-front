@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { Button } from 'shared/ui/button-d';
 import ArrowRight from '../../../../../public/icons/system/24x24/arrow-right.svg';
 import { useRouter } from 'next/navigation';
+import { Grid } from 'shared/ui/grid';
 
 const cx = classNames.bind(styles);
 
@@ -91,15 +92,29 @@ export function ClosestEventsSection() {
 
       <div className={styles.events}>
         {isGreaterThanL ? (
-          <>
+          <Grid className={cx('events-grid')}>
             {cardsList.map((_, index) => (
-              <EventCard key={index} badges={badges} image={{ src: TestPhotoCard, alt: 'test' }} />
+              <EventCard
+                className={cx('closest-item')}
+                photoClassName={cx('closest-item-photo')}
+                key={index}
+                badges={badges}
+                image={{ src: TestPhotoCard, alt: 'test' }}
+              />
             ))}
-          </>
+          </Grid>
         ) : (
           <Carousel carouselData={carouselData}>
             {cardsList.map((_, index) => (
-              <EventCard key={index} badges={badges} image={{ src: TestPhotoCard, alt: 'test' }} />
+              <EventCard
+                className={cx('closest-item')}
+                photoClassName={cx('closest-item-photo')}
+                titleClassName={cx('closest-item-title')}
+                badgesClassName={cx('closest-item-badges')}
+                key={index}
+                badges={badges}
+                image={{ src: TestPhotoCard, alt: 'test' }}
+              />
             ))}
           </Carousel>
         )}

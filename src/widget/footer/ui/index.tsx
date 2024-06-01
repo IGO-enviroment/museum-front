@@ -2,6 +2,7 @@ import styles from './footer.module.scss';
 import classNames from 'classnames/bind';
 import { Layout } from 'shared/ui/layout';
 import Logo from '../../../../public/icons/header/logo.svg';
+import LogoSmall from '../../../../public/icons/header/logo-0.5.svg';
 import Link from 'next/link';
 
 const cx = classNames.bind(styles);
@@ -50,7 +51,8 @@ export function Footer() {
     <footer className={cx('root')}>
       <Layout className={cx('layout')}>
         <div className={cx('container')}>
-          <Logo className={cx('logo')} fill='#54585D' />
+          <Logo className={cx('logo-svg')} fill='#54585D' />
+          <LogoSmall className={cx('logo-svg-small')} fill='#54585D' />
           {footerLinks.map(({ title, links }) => (
             <div className={cx('list')}>
               <div className={cx('list-title')}>{title}</div>

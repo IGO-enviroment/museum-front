@@ -34,7 +34,9 @@ const cards = [
 ];
 
 export const Gallery = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+  });
 
   const { selectedIndex } = useDotButtonNavigation(emblaApi);
 

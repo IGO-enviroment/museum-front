@@ -22,13 +22,6 @@
   }
 }
 
-.logo {
-  flex-shrink: 0;
-  svg {
-    fill: #54585D;
-  }
-}
-
 .list {
   display: flex;
   flex-direction: column;
@@ -49,6 +42,16 @@
   line-height: 23.4px;
 }
 
-.list-link {
+.logo-svg {
+  flex-shrink: 0;
+  &-small {
+    display: none;
+  }
 
+  @include less-than('s') {
+    display: none;
+    &-small {
+      display: block;
+    }
+  }
 }

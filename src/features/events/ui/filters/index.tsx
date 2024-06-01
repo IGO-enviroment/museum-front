@@ -2,14 +2,13 @@
 
 import classNames from 'classnames/bind';
 import classes from './filters.module.scss';
-import { Option, Select } from 'shared/ui/select';
 import { useEventsStore } from 'features/events/store/store';
 import { DatePickerField } from 'features/events/ui/dates-picker-field';
 import { ToggleField } from 'shared/ui/toggle-field';
 import { useMemo, useState } from 'react';
 import { RangeField } from 'shared/ui/range-field';
 import { FILTER_TYPES } from 'features/events/store/filters-slice';
-import { Filters } from 'features/events/types';
+import { Filters as IFilter } from 'features/events/types';
 
 const cx = classNames.bind(classes);
 
@@ -26,7 +25,7 @@ export const Filters = ({ className }: Props) => {
   };
 
   return (
-    <div className={cx(className)}>
+    <div className={cx('container', className)}>
       <h2 className={cx('title')}>Фильтры</h2>
       {filtersShown && (
         <div className={cx('root')}>
@@ -40,7 +39,7 @@ export const Filters = ({ className }: Props) => {
 };
 
 interface FilterProps {
-  data: Filters.Filter.Item;
+  data: IFilter.Filter.Item;
   onChange: (name: string, data?: any) => void;
 }
 

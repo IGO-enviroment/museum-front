@@ -85,8 +85,8 @@ export const FiltersData: Filters.Filter.Item[] = [
     title: 'Количество билетов',
     value: [
       {
-        from: 15,
-        to: 7,
+        from: 7,
+        to: 15,
         min: 0,
         max: 38,
       },

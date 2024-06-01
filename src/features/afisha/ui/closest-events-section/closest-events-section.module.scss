@@ -60,11 +60,30 @@
 
 
 .events {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 16px;
-  column-gap: 8px;
   margin-top: 16px;
+
+  .closest-item {
+    grid-column: span 3;
+
+    @include less-than('s') {
+      .closest-item-title {
+        margin-top: 16px;
+      }
+
+      .closest-item-photo {
+        height: 160px;
+      }
+
+      .closest-item-badges {
+        height: 40px;
+        overflow: hidden;
+        margin-top: 8px;
+      }
+
+      width: 300px;
+      height: 300px;
+    }
+  }
 }
 
 .top {

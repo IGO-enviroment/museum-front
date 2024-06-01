@@ -8,6 +8,13 @@
   z-index: 1000;
   color: white;
 
+  .logo {
+    &.disabled {
+    cursor: default;
+    pointer-events: none;
+    }
+  }
+
   &.black-theme {
     color: #1A2026;
 
@@ -27,6 +34,18 @@
   height: 58px;
 }
 
+.logo-svg {
+  &-small {
+    display: none;
+  }
+  @include less-than('s') {
+    display: none;
+    &-small {
+      display: block;
+    }
+  }
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -40,7 +59,6 @@
     display: none;
   }
 }
-
 
 .menu {
   display: none;

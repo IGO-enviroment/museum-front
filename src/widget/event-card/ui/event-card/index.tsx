@@ -13,6 +13,9 @@ type Props = {
   className?: string;
   image: ImageProps;
   badges?: Array<{ type: string; text: string }>;
+  photoClassName?: string;
+  badgesClassName?: string;
+  titleClassName?: string;
 };
 
 const getIconByBadgeType = (type: string) => {
@@ -32,16 +35,25 @@ const getIconByBadgeType = (type: string) => {
 
 const cx = classNames.bind(classes);
 
-export const EventCard = ({ className, image, href = '', badges }: Props) => {
+// @todo в entity
+export const EventCard = ({
+  className,
+  image,
+  href = '',
+  badges,
+  photoClassName,
+  badgesClassName,
+  titleClassName,
+}: Props) => {
   return (
     <Link href={href} className={cx('root', className)}>
-      <div className={cx('photo')}>
+      <div className={cx('photo', photoClassName)}>
         <Image {...image} />
       </div>
-      <div className={cx('title')}>
+      <div className={cx('title', titleClassName)}>
         Наука в большом городе. Интеллектуальный ландшафт Свердловской области области
       </div>
-      <div className={cx('badges')}>
+      <div className={cx('badges', badgesClassName)}>
         {badges?.map(({ type, text }) => (
           <div className={cx('badge')}>
             {getIconByBadgeType(type)}

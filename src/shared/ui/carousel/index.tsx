@@ -10,7 +10,7 @@ interface Props {
   children: ReactElement[];
   needDotNavigation?: boolean;
   carouselData: ReturnType<typeof useEmblaCarousel>;
-  className: string;
+  className?: string;
 }
 
 export function Carousel({ children, needDotNavigation, gap, carouselData, className }: Props) {

@@ -3,7 +3,6 @@
 import { Input } from 'shared/ui/input';
 import classNames from 'classnames/bind';
 import classes from './searcher.module.scss';
-import { Select, Option } from 'shared/ui/select';
 import { useEventsStore } from 'features/events/store/store';
 
 const cx = classNames.bind(classes);

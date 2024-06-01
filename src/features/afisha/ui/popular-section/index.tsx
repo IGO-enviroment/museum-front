@@ -57,6 +57,8 @@ export function PopularSection() {
         {cardsList.map((_, index) => (
           <EventCard
             className={cx('event-card')}
+            photoClassName={cx('event-card-photo')}
+            badgesClassName={cx('event-card-badges')}
             key={index}
             badges={badges}
             image={{ src: TestPhotoCard, alt: 'test' }}

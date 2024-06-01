@@ -19,8 +19,6 @@ type Props = {
   disabled?: boolean;
   /** Сработает при изменении значений после отпускания ползунка. */
   onChange: (data: [from: number, to: number]) => void;
-  /** Доп. классы. */
-  className?: string;
 };
 
 /**
@@ -38,15 +36,7 @@ export const format = (value: number | string, isFloat = false) => {
   return result;
 };
 
-export const RangeField = ({
-  max,
-  min,
-  start = min,
-  finish = max,
-  onChange,
-  disabled,
-  className,
-}: Props) => {
+export const RangeField = ({ max, min, start = min, finish = max, onChange, disabled }: Props) => {
   const [textStart, setTextStart] = useState(format(start));
   const [textFinish, setTextFinish] = useState(format(finish));
 
@@ -103,8 +93,9 @@ export const RangeField = ({
   };
 
   return (
-    <div className={cx('root', className)}>
+    <div className={cx('root')}>
       <div className={cx('fields')}>
+        от
         <Input
           className={cx('input')}
           value={textStart}
@@ -116,6 +107,7 @@ export const RangeField = ({
             event.code === 'Enter' && (event.target as HTMLElement).blur();
           }}
         />
+        до
         <Input
           className={cx('input')}
           value={textFinish}

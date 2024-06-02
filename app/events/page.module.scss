@@ -6,6 +6,10 @@
   @include breakpoints.less-than('l') {
     margin-top: 140px;
   }
+
+  @include breakpoints.less-than('s') {
+    margin-top: 20px;
+  }
 }
 
 .gallery {

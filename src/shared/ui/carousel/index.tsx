@@ -11,16 +11,24 @@ interface Props {
   needDotNavigation?: boolean;
   carouselData: ReturnType<typeof useEmblaCarousel>;
   className?: string;
+  containerClassName?: string;
 }
 
-export function Carousel({ children, needDotNavigation, gap, carouselData, className }: Props) {
+export function Carousel({
+  children,
+  needDotNavigation,
+  gap,
+  carouselData,
+  className,
+  containerClassName,
+}: Props) {
   const [emblaRef, emblaApi] = carouselData;
 
   return (
     <section className={`embla ${className ? className : ''}`}>
       <div className='embla__viewport' ref={emblaRef}>
         <div
-          className='embla__container'
+          className={`embla__container ${containerClassName ? containerClassName : ''}`}
           style={
             {
               '--slide-spacing': `${gap}px`,

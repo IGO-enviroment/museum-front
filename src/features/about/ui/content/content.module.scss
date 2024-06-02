@@ -11,8 +11,14 @@
   letter-spacing: -0.01em;
   text-align: left;
   color: white;
+
+  @include less-than('l'){
+    font-size: 32px;
+    line-height: 46.2px;
+  }
+
   @include less-than('s'){
-    font-size: 42px;
+    font-size: 24px;
     line-height: 46.2px;
   }
 }
@@ -94,9 +100,7 @@
 }
 
 .nav-cards {
-  @include less-than('s') {
     grid-row-gap: 8px;
-  }
 }
 
 .nav-card {

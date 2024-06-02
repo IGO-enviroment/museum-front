@@ -11,8 +11,13 @@
   letter-spacing: -0.01em;
   color: white;
 
-  @include less-than('s'){
-    font-size: 42px;
+  @include less-than('s') {
+    font-size: 32px;
+    line-height: 46.2px;
+  }
+
+  @include less-than('xs'){
+    font-size: 24px;
     line-height: 46.2px;
   }
 }

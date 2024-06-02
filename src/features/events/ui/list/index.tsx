@@ -28,9 +28,9 @@ export const List = () => {
           .flatMap(item => [item, item, item])
           .map((data, i) => (
             <EventCard
+              id={`${i}`}
               className={cx('event')}
-              href='/event/12345'
-              image={TestImg}
+              image={{ src: TestImg, alt: '' }}
               key={i}
               badges={badges}
             />

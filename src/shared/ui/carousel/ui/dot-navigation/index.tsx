@@ -12,6 +12,10 @@ interface Props {
 export function DotNavigation({ emblaApi }: Props) {
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButtonNavigation(emblaApi);
 
+  if (scrollSnaps.length <= 1) {
+    return null;
+  }
+
   return (
     <div className={cx('root')}>
       {scrollSnaps.map((_, index) => (

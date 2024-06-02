@@ -27,9 +27,7 @@ export function Carousel({ children, needDotNavigation, gap, carouselData, class
             } as CSSProperties
           }
         >
-          {children.map(item => (
-            <div className='embla__slide'>{item}</div>
-          ))}
+          {children?.map(item => <div className='embla__slide'>{item}</div>)}
         </div>
       </div>
       <div className='embla__controls'>

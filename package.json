@@ -10,7 +10,8 @@
     "type-check": "tsc --noEmit -p .",
     "lint:styles": "stylelint src/**/*.scss",
     "prepare": "husky install",
-    "prettier:check": "prettier . --check --ignore-unknown"
+    "prettier:check": "prettier . --check --ignore-unknown",
+    "json-server:start": "json-server -w ./json-server/db.json -p 3001"
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.12",
@@ -18,12 +19,14 @@
     "@pbe/react-yandex-maps": "^1.2.5",
     "@react-spring/parallax": "^9.7.3",
     "@react-spring/web": "^9.7.3",
+    "@tanstack/react-query": "^5.40.0",
     "axios": "^1.6.8",
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
     "embla-carousel": "^8.0.4",
     "embla-carousel-react": "^8.0.4",
     "immer": "^10.0.4",
+    "json-server": "^1.0.0-beta.0",
     "next": "14.1.3",
     "rc-pagination": "^4.0.4",
     "react": "^18",

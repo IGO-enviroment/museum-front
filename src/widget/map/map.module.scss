@@ -1,4 +1,18 @@
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(180, 8%, 95%);
+  }
+
+  100% {
+    background-color: hsl(0, 1%, 83%);
+  }
+}
+
 .root {
   height: 100%;
   margin: 0;
+
+  &.loading {
+    animation: skeleton-loading 0.8s linear infinite alternate;
+  }
 }

@@ -1,0 +1,66 @@
+@use 'styles/breakpoints';
+
+.root {
+  width: 100%;
+
+  @include breakpoints.less-than('s') {
+    grid-template-rows: 358px 48px;
+    grid-row-gap: 8px;
+  }
+}
+
+.image-current {
+  grid-column: 1 / 11;
+
+  @include breakpoints.less-than('l') {
+    grid-column: 1 / 7;
+  }
+
+  @include breakpoints.less-than('s') {
+    grid-column: 1 / -1;
+    border-radius: 12px;
+  }
+}
+
+.image-list {
+  grid-column: 11 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include breakpoints.less-than('l') {
+    grid-column: 7 / -1;
+  }
+
+  @include breakpoints.less-than('s') {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+
+  .image {
+     cursor: pointer;
+     height: 194px;
+     width: 100%;
+
+    &.active {
+      //filter: blur(1px);
+    }
+
+    @include breakpoints.less-than('s') {
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+.image-current, .image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

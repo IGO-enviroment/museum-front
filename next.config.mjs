@@ -8,6 +8,17 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+  env: {
+     API_URL: process.env.NODE_ENV.API_URL
+  },
   // @todo пересмотреть
   webpack(config) {
     // Grab the existing rule that handles SVG imports

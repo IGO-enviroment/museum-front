@@ -8,12 +8,16 @@ import ArrowDown from '../../../../../public/icons/system/24x24/chevron-down.svg
 import { PopularSection } from 'features/afisha/ui/popular-section';
 import { TicketsSection } from 'features/afisha/ui/tickets-section';
 import { ClosestEventsSection } from 'features/afisha/ui/closest-events-section';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-export function MainContent() {
+interface Props {
+  initialPopularEvents?: Array<PopularEvent>;
+}
+
+export function MainContent({ initialPopularEvents }: Props) {
   const elementToScroll = useRef<HTMLDivElement | null>(null);
   const bannerRef = useRef<HTMLDivElement | null>(null);
 
@@ -25,28 +29,6 @@ export function MainContent() {
       });
     }
   };
-
-  // заменить
-  useLayoutEffect(() => {
-    const onScroll = () => {
-      const scrollPosition = window.scrollY;
-      const winHeight = window.innerHeight;
-
-      if (bannerRef && elementToScroll) {
-        const banner = bannerRef.current;
-
-        if (banner?.style) {
-          banner.style.display = scrollPosition > winHeight ? 'none' : 'flex';
-        }
-      }
-    };
-
-    window.addEventListener('scroll', onScroll);
-
-    onScroll();
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   return (
     <div className={styles.root}>
@@ -67,7 +49,7 @@ export function MainContent() {
           <ArrowDown className={styles['arrow-down']} />
         </div>
         <Layout>
-          <PopularSection />
+          <PopularSection events={initialPopularEvents} />
           <TicketsSection />
           <ClosestEventsSection />
         </Layout>

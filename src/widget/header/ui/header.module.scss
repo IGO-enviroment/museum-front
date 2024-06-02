@@ -8,6 +8,10 @@
   z-index: 1000;
   color: white;
 
+  @include less-than('s') {
+    top: 16px;
+  }
+
   .logo {
     &.disabled {
     cursor: default;

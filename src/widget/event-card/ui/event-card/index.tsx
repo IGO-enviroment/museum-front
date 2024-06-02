@@ -9,9 +9,10 @@ import Info from '../../../../../public/icons/system/24x24/info.svg';
 import User from '../../../../../public/icons/system/24x24/user.svg';
 
 type Props = {
-  href?: string;
+  id: string;
   className?: string;
   image: ImageProps;
+  title?: string;
   badges?: Array<{ type: string; text: string }>;
   photoClassName?: string;
   badgesClassName?: string;
@@ -37,22 +38,21 @@ const cx = classNames.bind(classes);
 
 // @todo в entity
 export const EventCard = ({
+  id,
   className,
   image,
-  href = '',
   badges,
   photoClassName,
   badgesClassName,
   titleClassName,
+  title = 'Наука в большом городе. Интеллектуальный ландшафт Свердловской области области',
 }: Props) => {
   return (
-    <Link href={href} className={cx('root', className)}>
+    <Link href={`event/${id}`} className={cx('root', className)}>
       <div className={cx('photo', photoClassName)}>
-        <Image {...image} />
+        <Image {...image} fill />
       </div>
-      <div className={cx('title', titleClassName)}>
-        Наука в большом городе. Интеллектуальный ландшафт Свердловской области области
-      </div>
+      <div className={cx('title', titleClassName)}>{title}</div>
       <div className={cx('badges', badgesClassName)}>
         {badges?.map(({ type, text }) => (
           <div className={cx('badge')}>

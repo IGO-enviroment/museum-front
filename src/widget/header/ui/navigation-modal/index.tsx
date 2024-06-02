@@ -11,7 +11,6 @@ const navLinks: { children: string; href: string }[] = [
   { children: 'Афиша', href: '/' },
   { children: 'Все мероприятия', href: '/events' },
   { children: 'О музее', href: '/about' },
-  // { children: 'Личный кабинет', href: '' }, временно пока нет лк
 ];
 
 export const NavigationModal = ({ onClose }: { onClose: VoidFunction }) => {

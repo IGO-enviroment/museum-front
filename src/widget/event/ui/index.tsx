@@ -15,42 +15,10 @@ import Ticket from '../../../../public/icons/system/24x24/ticket.svg';
 import Info from '../../../../public/icons/system/24x24/info.svg';
 import { Map } from 'widget/map';
 import { useRouter } from 'next/navigation';
+import type { Event } from 'entities/event';
+import { ImageGallery } from 'widget/event/ui/image-gallery';
 
 const cx = classNames.bind(styles);
-
-const testData = {
-  info: [
-    {
-      type: 'date',
-      title: '13 апреля',
-      description: 'Ближайшая дата проведения',
-    },
-    {
-      type: 'time',
-      title: '16:00',
-      description: '16:00, GMT +05:00',
-    },
-    {
-      type: 'age',
-      title: '12+',
-      description: 'Возрастное ограничение',
-    },
-    {
-      type: 'price',
-      title: 'От 300 ₽',
-      description: 'Стоимость билета',
-    },
-  ],
-  address: {
-    name: 'Екатеринбург, Дом Качки Карла Либкнехта, 26',
-  },
-  about:
-    'В год 65-летия туристической аварии на перевале Дятлова Музей истории Екатеринбурга и\n' +
-    '«Фонд памяти группы Дятлова» представят выставку «Как живые. Группа Дятлова».\n' +
-    'Рассказывая о событиях 1959 года и знакомя с редчайшими артефактами, организаторы и\n' +
-    'кураторы выставки сконцентрируются на биографиях участников похода, их личностях, а\n' +
-    'также историческом, культурном и мифологическом следе, который остался после них.',
-};
 
 const getIconByType = (type: string) => {
   switch (type) {
@@ -67,14 +35,14 @@ const getIconByType = (type: string) => {
   }
 };
 
-export function Event({ params }: { params: { 'event-id': string } }) {
-  const { info, address, about } = testData;
+export function Event(props: Event) {
+  const { title, description, address, info, id, imageSrc, images } = props;
   const { push } = useRouter();
 
   return (
     <Layout className={cx('layout')}>
       <section className={cx('title')}>
-        <h1>«Этажи времени», экскурсия-променад по выставке «Ешь, лечись, живи» </h1>
+        <h1>{title}</h1>
         <Button
           size='small'
           children='Расписание и билеты'
@@ -85,7 +53,7 @@ export function Event({ params }: { params: { 'event-id': string } }) {
         />
       </section>
       <section className={cx('images')}>
-        <Image src={TestImage} alt='' />
+        <ImageGallery className={cx('image-gallery')} images={images} />
       </section>
       <Grid className={cx('info')}>
         {info.map(({ title, description, type }) => {
@@ -105,15 +73,15 @@ export function Event({ params }: { params: { 'event-id': string } }) {
       <Grid>
         <section className={cx('about', 'body-section')}>
           <h2 className={cx('section-title')}>О событиии</h2>
-          <div className={cx('about-description')}>{about}</div>
+          <div className={cx('about-description')}>{description}</div>
         </section>
       </Grid>
       <Grid>
         <section className={cx('address', 'body-section')}>
           <h2 className={cx('section-title')}>Адрес</h2>
-          <div className={cx('address-name')}>{address.name}</div>
+          <div className={cx('address-name')}>{address.title}</div>
           <div className={cx('map-container')}>
-            <Map point={[55.684758, 37.738521]} />
+            <Map point={address.coords} />
           </div>
         </section>
       </Grid>

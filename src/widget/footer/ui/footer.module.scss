@@ -1,10 +1,12 @@
 @import "styles/breakpoints";
 
 .root {
-  margin-top: 100px;
-  padding-bottom: 32px;
-  @include less-than('s'){
-    margin-top: 32px;
+  z-index: 1000;
+  padding: 100px 0 32px;
+  background: white;
+
+  @include less-than('s') {
+    padding-top: 48px;
   }
 }
 
@@ -16,9 +18,11 @@
   height: 100%;
   gap: 64px;
   color: #54585D;
+
   @include less-than('s'){
     flex-direction: column;
     gap: 32px;
+    padding: 24px 12px;
   }
 }
 
@@ -27,8 +31,10 @@
   flex-direction: column;
   gap: 16px;
   max-width: 432px;
+
   @include less-than('s'){
     max-width: none;
+
     + .list {
       padding-top: 32px;
       box-shadow: 0 2px 0 0 #D8DEE7 inset;
@@ -44,12 +50,14 @@
 
 .logo-svg {
   flex-shrink: 0;
+
   &-small {
     display: none;
   }
 
   @include less-than('s') {
     display: none;
+
     &-small {
       display: block;
     }

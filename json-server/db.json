@@ -1,0 +1,242 @@
+{
+  "popular": [
+    {
+    "id": "1",
+    "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+    "imageSrc": "https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg",
+    "url": "",
+    "badges": [
+      { "type": "date", "text": "28, 30 марта",
+        "price": 0
+      },
+      { "type": "time", "text": "14:00", "price": 0},
+      { "type":"age", "text": "12+" , "price": 0},
+      { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+    ]
+  },
+    {
+      "id": "2",
+      "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+      "imageSrc": "https://images.adsttc.com/media/images/627e/dec9/3e4b/318f/a100/0024/medium_jpg/courtesy_of_studio_malka_architecture.jpg?1652481733",
+      "url": "",
+      "badges": [
+        { "type": "date", "text": "28, 30 марта",
+          "price": 0
+        },
+        { "type": "time", "text": "14:00", "price": 0},
+        { "type":"age", "text": "12+" , "price": 0},
+        { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+      "imageSrc": "https://media.cntraveler.com/photos/5bbfc004c0b2432daa533e1c/16:9/w_2560,c_limit/Meadows-Museum_Dimitirs-Skliris_S3A9314.jpg",
+      "url": "",
+      "badges": [
+        { "type": "date", "text": "28, 30 марта",
+          "price": 0
+        },
+        { "type": "time", "text": "14:00", "price": 0},
+        { "type":"age", "text": "12+" , "price": 0},
+        { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+      "imageSrc": "https://www.culturepartnership.eu/upload/news/5e340eb81396a.jpg",
+      "url": "",
+      "badges": [
+        { "type": "date", "text": "28, 30 марта",
+          "price": 0
+        },
+        { "type": "time", "text": "14:00", "price": 0},
+        { "type":"age", "text": "12+" , "price": 0},
+        { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+      ]
+    }
+  ],
+  "closest-events": {
+    "month": "Май",
+    "dates": [{
+      "value": "2024-05-09T13:12:51.159Z",
+      "isActive": true
+    }, {
+      "value": "2024-05-10T13:12:51.159Z"
+    }, {
+      "value": "2024-05-11T13:12:51.159Z"
+    }, {
+      "value": "2024-05-12T13:12:51.159Z"
+    }, {
+      "value": "2024-05-13T13:12:51.159Z"
+    },
+      {
+        "value": "2024-05-14T13:12:51.159Z"
+      },
+      {
+        "value": "2024-05-15T13:12:51.159Z"
+      }
+    ],
+    "events": [{
+      "id": "1",
+      "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+      "imageSrc": "https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg",
+      "url": "",
+      "badges": [
+        { "type": "date", "text": "28, 30 марта",
+          "price": 0
+        },
+        { "type": "time", "text": "14:00", "price": 0},
+        { "type":"age", "text": "12+" , "price": 0},
+        { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+      ]
+    },
+      {
+        "id": "2",
+        "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+        "imageSrc": "https://images.adsttc.com/media/images/627e/dec9/3e4b/318f/a100/0024/medium_jpg/courtesy_of_studio_malka_architecture.jpg?1652481733",
+        "url": "",
+        "badges": [
+          { "type": "date", "text": "28, 30 марта",
+            "price": 0
+          },
+          { "type": "time", "text": "14:00", "price": 0},
+          { "type":"age", "text": "12+" , "price": 0},
+          { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+        "imageSrc": "https://media.cntraveler.com/photos/5bbfc004c0b2432daa533e1c/16:9/w_2560,c_limit/Meadows-Museum_Dimitirs-Skliris_S3A9314.jpg",
+        "url": "",
+        "badges": [
+          { "type": "date", "text": "28, 30 марта",
+            "price": 0
+          },
+          { "type": "time", "text": "14:00", "price": 0},
+          { "type":"age", "text": "12+" , "price": 0},
+          { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+        "imageSrc": "https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg",
+        "url": "",
+        "badges": [
+          { "type": "date", "text": "28, 30 марта",
+            "price": 0
+          },
+          { "type": "time", "text": "14:00", "price": 0},
+          { "type":"age", "text": "12+" , "price": 0},
+          { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+        "imageSrc": "https://images.adsttc.com/media/images/627e/dec9/3e4b/318f/a100/0024/medium_jpg/courtesy_of_studio_malka_architecture.jpg?1652481733",
+        "url": "",
+        "badges": [
+          { "type": "date", "text": "28, 30 марта",
+            "price": 0
+          },
+          { "type": "time", "text": "14:00", "price": 0},
+          { "type":"age", "text": "12+" , "price": 0},
+          { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+        "imageSrc": "https://media.cntraveler.com/photos/5bbfc004c0b2432daa533e1c/16:9/w_2560,c_limit/Meadows-Museum_Dimitirs-Skliris_S3A9314.jpg",
+        "url": "",
+        "badges": [
+          { "type": "date", "text": "28, 30 марта",
+            "price": 0
+          },
+          { "type": "time", "text": "14:00", "price": 0},
+          { "type":"age", "text": "12+" , "price": 0},
+          { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+        "imageSrc": "https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg",
+        "url": "",
+        "badges": [
+          { "type": "date", "text": "28, 30 марта",
+            "price": 0
+          },
+          { "type": "time", "text": "14:00", "price": 0},
+          { "type":"age", "text": "12+" , "price": 0},
+          { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+        "imageSrc": "https://images.adsttc.com/media/images/627e/dec9/3e4b/318f/a100/0024/medium_jpg/courtesy_of_studio_malka_architecture.jpg?1652481733",
+        "url": "",
+        "badges": [
+          { "type": "date", "text": "28, 30 марта",
+            "price": 0
+          },
+          { "type": "time", "text": "14:00", "price": 0},
+          { "type":"age", "text": "12+" , "price": 0},
+          { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+        ]
+      },
+      {
+        "id": "9",
+        "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
+        "imageSrc": "https://media.cntraveler.com/photos/5bbfc004c0b2432daa533e1c/16:9/w_2560,c_limit/Meadows-Museum_Dimitirs-Skliris_S3A9314.jpg",
+        "url": "",
+        "badges": [
+          { "type": "date", "text": "28, 30 марта",
+            "price": 0
+          },
+          { "type": "time", "text": "14:00", "price": 0},
+          { "type":"age", "text": "12+" , "price": 0},
+          { "type": "info", "text": "Экскурсия по выставке","price": 0 }
+        ]
+      }
+    ]
+  },
+  "event": {
+    "id": "1",
+    "title": "«Этажи времени», экскурсия-променад по выставке «Ешь, лечись, живи»",
+    "images": ["https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg", "https://images.adsttc.com/media/images/627e/dec9/3e4b/318f/a100/0024/medium_jpg/courtesy_of_studio_malka_architecture.jpg?1652481733", "https://media.cntraveler.com/photos/5bbfc004c0b2432daa533e1c/16:9/w_2560,c_limit/Meadows-Museum_Dimitirs-Skliris_S3A9314.jpg", "https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg"],
+    "imageSrc": "https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg",
+    "description": "В год 65-летия туристической аварии на перевале Дятлова Музей истории Екатеринбурга и «Фонд памяти группы Дятлова» представят выставку «Как живые. Группа Дятлова». Рассказывая о событиях 1959 года и знакомя с редчайшими артефактами, организаторы и кураторы выставки сконцентрируются на биографиях участников похода, их личностях, а также историческом, культурном и мифологическом следе, который остался после них.",
+    "address": {
+      "title": "Екатеринбург, Дом Качки Карла Либкнехта, 26",
+      "coords": [55.684758, 37.738521]
+    },
+    "info": [
+      {
+        "type": "date",
+        "title": "13 апреля",
+        "description": "Ближайшая дата проведения"
+      },
+      {
+        "type": "time",
+        "title": "16:00",
+        "description": "16:00, GMT +05:00"
+      },
+      {
+        "type": "age",
+        "title": "12+",
+        "description": "Возрастное ограничение"
+      },
+      {
+        "type": "price",
+        "title": "От 300 ₽",
+        "description": "Стоимость билета"
+      }
+    ]
+  }
+}

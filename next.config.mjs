@@ -11,13 +11,13 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "**",
+        protocol: 'https',
+        hostname: '**',
       },
     ],
   },
   env: {
-     API_URL: process.env.API_URL
+    API_URL: process.env.API_URL,
   },
   // @todo пересмотреть
   webpack(config) {

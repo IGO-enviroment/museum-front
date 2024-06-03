@@ -2,7 +2,7 @@ import styles from './modal.module.scss';
 import classNames from 'classnames/bind';
 import LogoSmall from '../../../../../public/icons/header/logo-0.5.svg';
 import Cross from '../../../../../public/icons/system/24x24/cross.svg';
-import { Button } from 'shared/ui/button-d';
+import { Button } from 'shared/ui/button';
 import Link from 'next/link';
 
 const cx = classNames.bind(styles);

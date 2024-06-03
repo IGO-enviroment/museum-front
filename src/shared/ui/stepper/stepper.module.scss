@@ -15,19 +15,19 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  background: #EAEBFF;
+  background: #eaebff;
   border-radius: 12px;
-  color: #6367CC;
+  color: #6367cc;
   height: 58px;
 
   svg {
     path {
-      stroke:  #6367CC;
+      stroke: #6367cc;
     }
   }
 
   &.active {
-    background: #6367CC;
+    background: #6367cc;
     color: white;
 
     svg {
@@ -36,7 +36,6 @@
       }
     }
   }
-
 }
 
 .input {

@@ -15,7 +15,6 @@
     column-gap: 8px;
     margin-top: 24px;
 
-
     @include breakpoints.less-than('s') {
       grid-template-columns: repeat(8, 1fr);
     }

@@ -14,7 +14,7 @@
 }
 
 .week-day {
-  color: rgb(176 182 191 / 100%)
+  color: rgb(176 182 191 / 100%);
 }
 
 .date {
@@ -30,9 +30,9 @@
   font-weight: 400;
   line-height: 18px;
   border-radius: 16px;
-  
+
   &.selected {
-    background: #6367CC;
+    background: #6367cc;
     color: white;
 
     .day {
@@ -44,6 +44,3 @@
     }
   }
 }
-
-
-

@@ -1,23 +1,23 @@
 .root {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
 }
 
 .fields {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .input {
-    padding: 8px 12px;
-    height: 58px;
+  padding: 8px 12px;
+  height: 58px;
 }
 
 .range-input {
-    padding: 24px 0;
-    pointer-events: fill;
+  padding: 24px 0;
+  pointer-events: fill;
 }

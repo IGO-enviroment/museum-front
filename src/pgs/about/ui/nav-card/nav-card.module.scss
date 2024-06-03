@@ -6,17 +6,18 @@
   height: 483px;
   padding: 24px;
   border-radius: 24px;
-  background: conic-gradient(from 90deg at 0% 100%, #18274F 0deg, #30457B 90deg, #18274F 360deg);
+  background: conic-gradient(from 90deg at 0% 100%, #18274f 0deg, #30457b 90deg, #18274f 360deg);
   overflow: hidden;
 
-  &::before, &::after {
-     position: absolute;
-     content: '';
-     width: 100%;
-     aspect-ratio: 1;
-     border: 1px solid white;
-     opacity: 0.5;
-     border-radius: 50%;
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    aspect-ratio: 1;
+    border: 1px solid white;
+    opacity: 0.5;
+    border-radius: 50%;
   }
 
   &::before {
@@ -25,7 +26,7 @@
   }
 
   &::after {
-    top:270px;
+    top: 270px;
     left: -1px;
   }
 }

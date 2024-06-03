@@ -7,7 +7,7 @@ import { Tab } from 'shared/ui/tab';
 import { Stepper } from 'shared/ui/stepper';
 import { ChangeEvent, useState } from 'react';
 import { Input } from 'shared/ui/input';
-import { Button } from 'shared/ui/button-d';
+import { Button } from 'shared/ui/button';
 import ArrowRight from '../../../../../public/icons/system/24x24/arrow-right.svg';
 
 const cx = classNames.bind(styles);

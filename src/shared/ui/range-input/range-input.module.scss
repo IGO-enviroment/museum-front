@@ -1,4 +1,4 @@
-$active-color: #6367CC;
+$active-color: #6367cc;
 
 .root {
   color: $active-color;
@@ -50,7 +50,7 @@ $active-color: #6367CC;
   box-sizing: border-box;
   border-radius: 50%;
   outline: 0;
-  background-color:$active-color;
+  background-color: $active-color;
   transition-property: box-shadow, transform;
   transition-timing-function: ease;
   transition-duration: 120ms;

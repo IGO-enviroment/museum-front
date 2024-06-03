@@ -8,9 +8,10 @@
     "start": "next start",
     "lint": "yarn type-check && yarn lint:styles && yarn prettier:check",
     "type-check": "tsc --noEmit -p .",
-    "lint:styles": "stylelint src/**/*.scss",
+    "lint:styles": "stylelint src/**/*.{css,scss} --fix",
     "prepare": "husky install",
     "prettier:check": "prettier . --check --ignore-unknown",
+    "prettier:write": "prettier . --write --ignore-unknown",
     "json-server:start": "json-server -w ./json-server/db.json -p 3001"
   },
   "dependencies": {

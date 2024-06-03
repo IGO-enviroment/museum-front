@@ -10,13 +10,15 @@ const selectedValues = (state: FiltersStore) =>
         case FILTER_TYPES.SELECT:
         case FILTER_TYPES.MULTI_SELECT:
         case FILTER_TYPES.TOGGLE: {
-          const selected = filter.value.filter(value => value.isSelected).map(value => value.id);
+          const selected = filter.value
+            .filter((value: any) => value.isSelected)
+            .map((value: any) => value.id);
           return selected.length
             ? {
                 ...acc,
                 [filter.name]: filter.value
-                  .filter(value => value.isSelected)
-                  .map(value => value.id),
+                  .filter((value: any) => value.isSelected)
+                  .map((value: any) => value.id),
               }
             : acc;
         }

@@ -43,7 +43,7 @@ $height: 36px;
   top: 5px;
   left: 4px;
   border-radius: 16px;
-  background-color: #FFF;
+  background-color: #fff;
   position: relative;
   transition-property: all;
   transition-timing-function: linear;
@@ -51,17 +51,17 @@ $height: 36px;
 }
 
 .root.focus-visible .track {
-    box-shadow: 0 0 0 3px $checked-color;
+  box-shadow: 0 0 0 3px $checked-color;
 }
 
 .root.checked .thumb {
-    left: 28px;
-    background-color: #fff;
+  left: 28px;
+  background-color: #fff;
 }
 
 .root.checked .track {
-    border: none;
-    background: $checked-color
+  border: none;
+  background: $checked-color;
 }
 
 .input {

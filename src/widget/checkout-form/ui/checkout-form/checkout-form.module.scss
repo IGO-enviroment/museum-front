@@ -1,27 +1,31 @@
-@use "styles/breakpoints";
+@use 'styles/breakpoints';
 
 .root {
-   grid-template-rows: auto auto;
-   grid-row-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-row-gap: 16px;
 
-   @include breakpoints.less-than('s') {
-     grid-template-rows: repeat(4, auto);
-     grid-auto-flow: row;
-   }
+  @include breakpoints.less-than('s') {
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: row;
+  }
 
-  .days, .time, .ticket-type, .personal {
+  .days,
+  .time,
+  .ticket-type,
+  .personal {
     display: flex;
     flex-direction: column;
   }
 
   @include breakpoints.less-than('s') {
-      .days, .time, .ticket-type, .personal {
-        grid-column: 1 / -1;
-      }
+    .days,
+    .time,
+    .ticket-type,
+    .personal {
+      grid-column: 1 / -1;
+    }
   }
 }
-
-
 
 .days {
   grid-area: days;
@@ -66,7 +70,6 @@
     .time-tab {
       flex: 1 0 calc(33% - 1rem);
     }
-
   }
 }
 
@@ -83,9 +86,6 @@
     grid-row: 3 / 4;
   }
 
-
-
-
   .tickets {
     display: flex;
     flex-wrap: wrap;
@@ -96,7 +96,7 @@
     margin-top: auto;
     padding-top: 32px;
 
-    @media(width <= 700px){
+    @media (width <= 700px) {
       flex-direction: column;
       align-items: stretch;
     }
@@ -153,7 +153,6 @@
     }
   }
 }
-
 
 .card-title {
   @include breakpoints.less-than('s') {

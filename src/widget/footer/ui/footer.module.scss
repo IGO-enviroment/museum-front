@@ -1,4 +1,4 @@
-@import "styles/breakpoints";
+@import 'styles/breakpoints';
 
 .root {
   z-index: 1000;
@@ -11,15 +11,15 @@
 }
 
 .container {
-  background: #F6F8F9;
+  background: #f6f8f9;
   border-radius: 16px;
   display: flex;
   padding: 32px;
   height: 100%;
   gap: 64px;
-  color: #54585D;
+  color: #54585d;
 
-  @include less-than('s'){
+  @include less-than('s') {
     flex-direction: column;
     gap: 32px;
     padding: 24px 12px;
@@ -32,12 +32,12 @@
   gap: 16px;
   max-width: 432px;
 
-  @include less-than('s'){
+  @include less-than('s') {
     max-width: none;
 
     + .list {
       padding-top: 32px;
-      box-shadow: 0 2px 0 0 #D8DEE7 inset;
+      box-shadow: 0 2px 0 0 #d8dee7 inset;
     }
   }
 }

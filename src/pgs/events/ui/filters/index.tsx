@@ -48,19 +48,19 @@ export const Filter = ({ data, onChange }: FilterProps) => {
 
   const CurrentFilter = useMemo(() => {
     if (type === FILTER_TYPES.SELECT) {
-      const selected = value?.filter(item => item.isSelected);
-      const selectedIds = selected?.map(item => item.id);
+      const selected = value?.filter((item: any) => item.isSelected);
+      const selectedIds = selected?.map((item: any) => item.id);
 
       const onOptionChange = ({ id: optionId }: any) => {
         const newSelected = selectedIds.includes(optionId)
-          ? selectedIds.filter(id => id !== optionId)
+          ? selectedIds.filter((id: any) => id !== optionId)
           : [...selectedIds, optionId];
         onChange(name, newSelected);
       };
 
       return (
         <div className={cx('select')}>
-          {value?.map((option, i) => (
+          {value?.map((option: any, i: number) => (
             <div
               className={cx('option', { selected: selectedIds.includes(option.id) })}
               onClick={() => onOptionChange(option)}

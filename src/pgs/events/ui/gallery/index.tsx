@@ -7,7 +7,7 @@ import styles from './gallery.module.scss';
 import TestImg from '../../../../../public/test/test.jpg';
 import { useDotButtonNavigation } from 'shared/ui/carousel/utils/use-dot-navigation';
 import Image from 'next/image';
-import { Button } from 'shared/ui/button-d';
+import { Button } from 'shared/ui/button';
 import ChevronRight from '../../../../../public/icons/system/24x24/chevron-right.svg';
 
 const cx = classNames.bind(styles);

@@ -3,7 +3,7 @@
 import classNames from 'classnames/bind';
 import classes from './list.module.scss';
 import TestImg from '../../../../../public/test/test.jpg';
-import { EventCard } from 'widget/event-card';
+import { EventCard } from '../../../../entities/event-card';
 import { Pagination } from 'shared/ui/pagination';
 import { useEventsStore } from '../../model/store/store';
 

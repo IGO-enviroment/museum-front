@@ -8,7 +8,7 @@
   margin-right: auto;
   max-width: map.get($map, 'xl');
   width: 100%;
-  @include less-than('l'){
+  @include less-than('l') {
     padding-left: 16px;
     padding-right: 16px;
   }

@@ -1,12 +1,12 @@
 import styles from './closest-events-section.module.scss';
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale/ru';
-import { EventCard } from 'widget/event-card';
+import { EventCard } from '../../../../entities/event-card';
 import { useBreakpoint } from 'shared/lib/hooks/use-breakpoint';
 import classNames from 'classnames/bind';
 import { Carousel } from 'shared/ui/carousel';
 import useEmblaCarousel from 'embla-carousel-react';
-import { Button } from 'shared/ui/button-d';
+import { Button } from 'shared/ui/button';
 import ArrowRight from '../../../../../public/icons/system/24x24/arrow-right.svg';
 import { useRouter } from 'next/navigation';
 import { Grid } from 'shared/ui/grid';

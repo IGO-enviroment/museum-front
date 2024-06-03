@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Event as EventCard } from 'widget/event';
+import { EventPage } from 'pgs/event';
 import { fetchEventById } from 'entities/event';
 
 interface Props {
@@ -28,5 +28,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Event({ params: { id } }: Props) {
   const data = await fetchEventById(id);
 
-  return <EventCard {...data} />;
+  return <EventPage {...data} />;
 }

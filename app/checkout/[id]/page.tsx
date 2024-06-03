@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
-import { Checkout } from 'features/checkout';
+import { CheckoutPage } from 'pgs/checkout';
 
 export const metadata: Metadata = {
   title: 'Оформление заказа',
 };
 
-export default function CheckoutPage() {
-  return <Checkout />;
+export default function Checkout() {
+  return <CheckoutPage />;
 }

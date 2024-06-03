@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Preparation } from 'pages/preparation';
+import { Preparation } from 'widget/preparation';
 
 export const metadata: Metadata = {
   title: 'Подготовка к походу в музей',

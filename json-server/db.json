@@ -1,5 +1,5 @@
 {
-  "popular": [
+  "testpopular": [
     {
     "id": "1",
     "title": "Наука в большом городе. Интеллектуальный ландшафт Свердловской области области",
@@ -57,7 +57,7 @@
       ]
     }
   ],
-  "closest-events": {
+  "testclosest-events": {
     "month": "Май",
     "dates": [{
       "value": "2024-05-09T13:12:51.159Z",
@@ -206,7 +206,7 @@
       }
     ]
   },
-  "event": {
+  "testevent": {
     "id": "1",
     "title": "«Этажи времени», экскурсия-променад по выставке «Ешь, лечись, живи»",
     "images": ["https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg", "https://images.adsttc.com/media/images/627e/dec9/3e4b/318f/a100/0024/medium_jpg/courtesy_of_studio_malka_architecture.jpg?1652481733", "https://media.cntraveler.com/photos/5bbfc004c0b2432daa533e1c/16:9/w_2560,c_limit/Meadows-Museum_Dimitirs-Skliris_S3A9314.jpg", "https://cdn.britannica.com/51/194651-050-747F0C18/Interior-National-Gallery-of-Art-Washington-DC.jpg"],

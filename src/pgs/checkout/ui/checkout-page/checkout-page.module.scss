@@ -1,0 +1,17 @@
+@import "styles/breakpoints";
+
+.section-title {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 61.6px;
+  text-align: left;
+  margin-bottom: 100px;
+
+  @include less-than('l') {
+    font-size: 42px;
+  }
+
+  @include less-than('s') {
+    display: none;
+  }
+}

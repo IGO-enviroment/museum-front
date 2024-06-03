@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export const client = axios.create({
-  baseURL: 'https://museum-ekb.ru',
+  baseURL: process.env.API_URL,
   timeout: 10000,
 });

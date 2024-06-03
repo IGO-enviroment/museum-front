@@ -13,7 +13,7 @@ jobs:
       matrix:
         node-version: [20.x]
     steps:
-      - name: Checkout Commit
+      - name: CheckoutPage Commit
         uses: actions/checkout@v4
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
@@ -39,7 +39,7 @@ jobs:
   #        node-version: [18.x]
   #    needs: [deps-installation]
   #    steps:
-  #      - name: Checkout Commit
+  #      - name: CheckoutPage Commit
   #        uses: actions/checkout@v4
   #      - name: Setup Node.js ${{ matrix.node-version }}
   #        uses: actions/setup-node@v4
@@ -62,7 +62,7 @@ jobs:
         node-version: [20.x]
     needs: [deps-installation]
     steps:
-      - name: Checkout Commit
+      - name: CheckoutPage Commit
         uses: actions/checkout@v4
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4

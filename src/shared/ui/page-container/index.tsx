@@ -2,14 +2,14 @@ import { ReactNode } from 'react';
 import styles from './page-container.module.scss';
 import classNames from 'classnames/bind';
 import { Layout } from 'shared/ui/layout';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 const cx = classNames.bind(styles);
 
 interface Props {
   title: string;
   description?: string;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   children: ReactNode;
 }
 

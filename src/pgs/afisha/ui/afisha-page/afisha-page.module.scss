@@ -1,8 +1,4 @@
-@import "styles/breakpoints";
-
-.root {
-
-}
+@import 'styles/breakpoints';
 
 .title {
   font-size: 96px;
@@ -16,14 +12,14 @@
     line-height: 46.2px;
   }
 
-  @include less-than('xs'){
+  @include less-than('xs') {
     font-size: 24px;
     line-height: 46.2px;
   }
 }
 
 .section-title {
-  color: #1A2026;
+  color: #1a2026;
   font-size: 32px;
   font-weight: 600;
   line-height: 35px;
@@ -35,7 +31,7 @@
 }
 
 .subtitle {
-  color: #C5CBD3;
+  color: #c5cbd3;
 }
 
 .main-banner-wrapper {
@@ -44,14 +40,14 @@
   z-index: -1;
 }
 
-.main-banner{
+.main-banner {
   position: fixed;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
 
-  &::before{
+  &::before {
     position: absolute;
     content: '';
     top: 0;
@@ -59,12 +55,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #040B1F 0%, rgba(4, 11, 31, 0.5) 67%, rgba(4, 11, 31, 0.2) 100%);
+    background: linear-gradient(
+      180deg,
+      #040b1f 0%,
+      rgba(4, 11, 31, 0.5) 67%,
+      rgba(4, 11, 31, 0.2) 100%
+    );
   }
 }
 
 .banner-img {
-  position:absolute;
+  position: absolute;
   z-index: -100;
   top: 0;
   left: 0;
@@ -126,7 +127,7 @@
 
     path {
       stroke-width: 3px;
-      d: path("m6 18 12 12 12-12");
+      d: path('m6 18 12 12 12-12');
     }
   }
 }

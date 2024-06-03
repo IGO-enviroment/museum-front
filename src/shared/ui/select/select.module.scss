@@ -14,7 +14,7 @@ $bg-selected: #0080ff;
   overflow-x: scroll;
   flex-shrink: 0;
 
-  &:hover{
+  &:hover {
     background: $bg-hovered;
   }
 }
@@ -38,11 +38,11 @@ $bg-selected: #0080ff;
 
 /** Options */
 
-.option{
+.option {
   padding: 15px;
   border-radius: inherit;
 
-  &:hover{
+  &:hover {
     background: $bg-hovered;
   }
 
@@ -51,7 +51,8 @@ $bg-selected: #0080ff;
     background: $bg-selected;
   }
 
-  &.highlighted, &.highlighted.selected  {
+  &.highlighted,
+  &.highlighted.selected {
     // @todo расскоментить как придумаю как лучше показывать нафигацию по клаве.
     //background: $bg-hovered;
   }

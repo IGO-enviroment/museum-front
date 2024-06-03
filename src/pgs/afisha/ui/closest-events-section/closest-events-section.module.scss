@@ -1,8 +1,8 @@
-@import "styles/breakpoints";
+@import 'styles/breakpoints';
 
 .section-title {
   display: block;
-  color: #1A2026;
+  color: #1a2026;
   font-size: 32px;
   font-weight: 600;
   line-height: 35px;
@@ -16,7 +16,7 @@
   overflow: hidden;
   margin-top: 100px;
 
-  @include less-than('l'){
+  @include less-than('l') {
     margin-top: 48px;
   }
 
@@ -54,10 +54,9 @@
   }
 
   .week-day {
-    color: rgba(176, 182, 191, 1)
+    color: rgba(176, 182, 191, 1);
   }
 }
-
 
 .events {
   margin-top: 16px;

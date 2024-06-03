@@ -39,7 +39,6 @@
     }
   }
 
-
   @include breakpoints.less-than('s') {
     flex-direction: column;
     align-items: stretch;
@@ -59,18 +58,17 @@
       align-self: flex-end;
       margin-left: 0;
     }
-
   }
 }
 
 div.info {
-   margin-top: 32px;
-   gap: 16px;
+  margin-top: 32px;
+  gap: 16px;
 }
 
 .info-card {
   padding: 16px;
-  background: #F6F8F9;
+  background: #f6f8f9;
   grid-column: span 3;
   border-radius: 16px;
 
@@ -99,7 +97,7 @@ div.info {
     margin-bottom: 24px;
   }
 
-  @include breakpoints.less-than('l'){
+  @include breakpoints.less-than('l') {
     grid-column: span 6;
   }
 }
@@ -135,6 +133,6 @@ div.info {
   }
 
   .image-gallery {
-      width: 100%;
+    width: 100%;
   }
 }

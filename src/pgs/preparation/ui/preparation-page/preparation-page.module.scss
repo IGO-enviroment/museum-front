@@ -1,4 +1,4 @@
-@import "styles/breakpoints";
+@import 'styles/breakpoints';
 
 .section {
   &:not(:last-child) {
@@ -7,13 +7,12 @@
 }
 
 .section-title {
-   margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .section-description {
-   margin-bottom: 32px;
+  margin-bottom: 32px;
 }
-
 
 .image {
   width: 100%;

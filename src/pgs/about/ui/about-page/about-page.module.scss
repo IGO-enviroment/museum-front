@@ -1,7 +1,7 @@
-@import "styles/breakpoints";
+@import 'styles/breakpoints';
 
 .section-title {
-  color: #1A2026;
+  color: #1a2026;
   font-size: 32px;
   font-weight: 600;
   line-height: 35px;
@@ -17,7 +17,7 @@
 }
 
 .nav-cards {
-    grid-row-gap: 8px;
+  grid-row-gap: 8px;
 }
 
 .nav-card {
@@ -25,8 +25,12 @@
   height: 483px;
 
   &:nth-child(2n) {
-    background: radial-gradient(129.77% 100% at 100% 100%, #1CC2D9 0%, #226188 56.37%, #253766 97.58%);
-
+    background: radial-gradient(
+      129.77% 100% at 100% 100%,
+      #1cc2d9 0%,
+      #226188 56.37%,
+      #253766 97.58%
+    );
   }
 
   @include less-than('l') {
@@ -45,5 +49,4 @@
       line-height: 33.6px;
     }
   }
-
 }

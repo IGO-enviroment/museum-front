@@ -38,9 +38,9 @@
   }
 
   .image {
-     cursor: pointer;
-     height: 194px;
-     width: 100%;
+    cursor: pointer;
+    height: 194px;
+    width: 100%;
 
     &.active {
       //filter: blur(1px);
@@ -53,7 +53,8 @@
   }
 }
 
-.image-current, .image {
+.image-current,
+.image {
   position: relative;
   border-radius: 16px;
   overflow: hidden;

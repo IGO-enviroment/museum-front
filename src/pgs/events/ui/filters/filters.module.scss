@@ -7,7 +7,7 @@
   font-size: 32px;
   font-weight: 600;
   line-height: 35.2px;
-  color: #1A2026;
+  color: #1a2026;
 }
 
 .root {
@@ -21,14 +21,11 @@
   align-self: flex-start;
 }
 
-.filters-controller{
+.filters-controller {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-
-
-
 
 .filter {
   padding: 24px 0;
@@ -36,7 +33,7 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 23.4px;
-    color: #1A2026;
+    color: #1a2026;
     padding-bottom: 24px;
   }
 }
@@ -50,11 +47,11 @@
 .option {
   cursor: pointer;
   user-select: none;
-  background: #F6F8F9;
+  background: #f6f8f9;
   padding: 18.5px 16px;
   border-radius: 12px;
   &.selected {
     color: white;
-    background: #6367CC;
+    background: #6367cc;
   }
 }

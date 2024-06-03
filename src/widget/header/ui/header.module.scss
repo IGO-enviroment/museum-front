@@ -1,6 +1,6 @@
 @import 'styles/breakpoints';
 
-.header{
+.header {
   position: absolute;
   top: 48px;
   left: 0;
@@ -14,17 +14,17 @@
 
   .logo {
     &.disabled {
-    cursor: default;
-    pointer-events: none;
+      cursor: default;
+      pointer-events: none;
     }
   }
 
   &.black-theme {
-    color: #1A2026;
+    color: #1a2026;
 
     .menu {
       path {
-        stroke: #1A2026;
+        stroke: #1a2026;
       }
     }
   }

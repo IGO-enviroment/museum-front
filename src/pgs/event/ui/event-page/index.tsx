@@ -3,7 +3,7 @@
 import { Layout } from 'shared/ui/layout';
 import classNames from 'classnames/bind';
 import styles from './event-page.module.scss';
-import { Button } from 'shared/ui/button-d';
+import { Button } from 'shared/ui/button';
 import ChevronRight from '../../../../../public/icons/system/24x24/chevron-right.svg';
 import { Grid } from 'shared/ui/grid';
 import Calendar from '../../../../../public/icons/system/24x24/calendar.svg';

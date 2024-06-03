@@ -1,6 +1,6 @@
 import styles from './nav-card.module.scss';
 import classNames from 'classnames/bind';
-import { Button } from 'shared/ui/button-d';
+import { Button } from 'shared/ui/button';
 import ArrowRight from '../../../../../public/icons/system/24x24/arrow-right.svg';
 
 const cx = classNames.bind(styles);

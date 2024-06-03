@@ -1,6 +1,6 @@
 import { client } from 'shared/api';
 
-export async function getPopularEvents(): Promise<PopularEvent[]> {
+export async function getPopularEvents(): Promise<PopularEvent[] | undefined> {
   try {
     const { data: popularEvents } = await client.get('/popular');
     return popularEvents;

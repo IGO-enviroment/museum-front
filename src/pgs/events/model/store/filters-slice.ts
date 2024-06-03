@@ -45,7 +45,7 @@ const generateFilters = (filters: Filters.Filter.Item[], filter: Filters.Filter.
 const changeSelectFilter = (filter: Filters.Filter.Item, selectedIds: number[]) => {
   return {
     ...filter,
-    value: filter.value?.map(option => ({
+    value: filter.value?.map((option: any) => ({
       ...option,
       isSelected: Boolean(option.id && selectedIds.includes(option.id)),
     })),
@@ -102,7 +102,7 @@ export const createFiltersSlice: StateCreator<FiltersSlice> = (set, get) => ({
         case FILTER_TYPES.TOGGLE:
           return {
             ...filter,
-            value: filter.value.map(value => ({ ...value, isSelected: false })),
+            value: filter.value.map((value: any) => ({ ...value, isSelected: false })),
           };
         //@todo тоже засунуть под range
         case FILTER_TYPES.CALENDAR:

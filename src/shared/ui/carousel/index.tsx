@@ -7,7 +7,7 @@ import './carousel.scss';
 
 interface Props {
   gap?: number;
-  children: ReactElement[];
+  children?: ReactElement[];
   needDotNavigation?: boolean;
   carouselData: ReturnType<typeof useEmblaCarousel>;
   className?: string;

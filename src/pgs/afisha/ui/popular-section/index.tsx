@@ -1,10 +1,10 @@
 import { Carousel } from 'shared/ui/carousel';
-import { EventCard } from 'widget/event-card';
+import { EventCard } from '../../../../entities/event-card';
 import styles from './popular-section.module.scss';
 import classNames from 'classnames/bind';
 import { useBreakpoint } from 'shared/lib/hooks/use-breakpoint';
 import useEmblaCarousel from 'embla-carousel-react';
-import { Button } from 'shared/ui/button-d';
+import { Button } from 'shared/ui/button';
 import ArrowLeft from '../../../../../public/icons/system/24x24/chevron-left.svg';
 import ArrowRight from '../../../../../public/icons/system/24x24/chevron-right.svg';
 import { useButtonNavigation } from 'shared/ui/carousel/utils/use-button-navigation';
